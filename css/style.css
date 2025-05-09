@@ -458,15 +458,26 @@ footer .fotter-bottom a:hover {
   display: block;
 }
 
+.discover {
+  background-color: #F5F5F0;
+  padding: 60px 0;
+}
 .discover .heading-title {
   padding: 10px 0;
   font-family: var(--secondary-font);
   font-size: var(--font-xxl);
   font-weight: 600;
 }
+.discover .row {
+  background-color: white;
+  border-radius: 20px;
+}
+.discover .col-lg-3 {
+  padding: 20px;
+}
 .discover .menu-destination .destination-sidenav {
   padding: 10px;
-  border: 1px solid red;
+  border: none;
   width: 100%;
   display: flex;
   align-items: center;
