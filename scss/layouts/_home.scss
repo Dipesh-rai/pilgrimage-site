@@ -1,0 +1,180 @@
+.banner {
+    width: 100%;
+    height: 90vh;
+
+    img {
+        position: relative;
+        filter: brightness(90%);
+    }
+
+    .banner-items {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 550px;
+
+        .banner-heading {
+            font-family: var(--secondary-font);
+            font-size: 50px;
+            font-weight: 600;
+        }
+    }
+
+    .left{
+        padding:4px 8px;
+        background-color: #494E3C;
+        border-radius: 50%;
+    }
+    .small-header{
+        font-size:var(--font-sm);
+    }
+
+    .small-group{
+        color:white;
+        font-size:var(--font-sm)
+    }
+
+
+}
+
+.choose{
+    .experience{
+        padding:10px;
+        background-color:#FAFAED;
+        height:250px;
+        border-radius: 10px;
+        transition:0.2s;
+        .icon{
+            background-color:var(--icon-color);
+            height:50px;
+            width:50px;
+            border-radius:50%;
+            margin-inline:auto;
+            i{
+                color:var(--primary-color);
+            }
+        }
+        .heading-c{
+            font-size:var(--font-xl);
+            font-weight:600;
+            color:var(--primary-color);
+        }
+        &:hover{
+            transform: translateY(-5px);
+        }
+    }
+
+    .commit{
+        padding:0;
+        font-size:var(--font-md);
+        border-radius:15px;
+        overflow:hidden;
+        box-shadow:  0 4px 8px rgba(0, 0, 0, 0.2);
+        .commit-heading{
+            font-size:var(--font-xxl);
+            font-weight:600;
+        }
+        ul{
+            padding:0;
+            li{
+                padding:10px 0;
+                span{
+                    color:var(--primary-color);
+                    font-size:var(--font-xl);
+                    margin-right:5px;
+                }
+            }
+        }
+    }
+}
+
+// sacred
+.sacred{
+    p{
+        width:560px;
+        margin-inline: auto;
+    }
+
+    .sacred-site{
+        color:white;
+        .sacred-img{
+            border-radius:15px;
+            overflow: hidden;
+            position:relative;
+            img{
+                filter: brightness(70%);
+                transition:0.5s;
+            }
+            .sacred-content{
+                position:absolute;
+                bottom:10px;
+                left:10px;
+                right:10px;
+                .sacred-content-header{
+                    font-size:var(--font-xxl);
+                    font-weight:700;
+                }
+                .sacred-content-body{
+                    font-weight:400;
+                }
+    
+            }
+            a{
+                display:block;
+                width:fit-content;
+                color: var(--primary-color) !important;
+                i{
+                    font-size:var(--font-sm);
+                }
+                &:hover{
+                    text-decoration:underline !important;
+                    i{
+                        text-decoration:underline !important;
+                    }
+                }
+            }
+            &:hover{
+                transform:translateY(-10px);
+                transition:0.5s;
+                img{
+                    transform:scale(1.2);
+                }
+                .sacred-content-body{
+                    display:block;
+                }
+            }
+        }
+       
+    }
+}
+
+// discover
+.discover{
+    .heading-title{
+        padding:10px 0;
+        font-family:var(--secondary-font);
+        font-size:var(--font-xxl);
+        font-weight:600;
+    }
+
+    .menu-destination{
+        button{
+            padding:10px;
+            border:1px solid red;
+            width:90%;
+            @include flex-items-center;
+            gap:10px;
+            .destination-name{
+                text-align:start;
+                font-family:var(--secondary-font);
+                font-weight:600;
+            }
+            .destination-title{
+                text-align:start;
+                font-size:var(--font-md);
+            }
+        }
+    }
+
+}
+

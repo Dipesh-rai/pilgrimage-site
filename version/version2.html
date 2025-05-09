@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experience sacred journeys in Nepal with our pilgrimage tours. Visit ancient temples, monasteries and spiritual sites across the Himalayan kingdom.">
+    <title>Nepal Pilgrimage Tours - Sacred Journeys in the Himalayas</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#e65c00',secondary:'#8a4baf'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            top: 100%;
+            left: 0;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .hamburger {
+            display: none;
+        }
+        @media (max-width: 1023px) {
+            .hamburger {
+                display: block;
+            }
+            .desktop-menu {
+                display: none;
+            }
+            .mobile-menu {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: white;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+                z-index: 50;
+            }
+            .mobile-menu.active {
+                display: block;
+            }
+            .mobile-dropdown {
+                overflow: hidden;
+                max-height: 0;
+                transition: max-height 0.3s ease;
+            }
+            .mobile-dropdown.active {
+                max-height: 500px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="#" class="text-2xl font-['Pacifico'] text-primary">Nepal Pilgrimage Tours</a>
+            
+            <!-- Desktop Menu -->
+            <nav class="desktop-menu">
+                <ul class="flex space-x-8">
+                    <li><a href="#" class="font-medium text-gray-800 hover:text-primary transition">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="font-medium text-gray-800 hover:text-primary transition flex items-center">
+                            Destinations <i class="ri-arrow-down-s-line ml-1"></i>
+                        </a>
+                        <div class="dropdown-content bg-white mt-2">
+                            <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 hover:text-primary">Pashupatinath Temple</a>
+                            <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 hover:text-primary">Lumbini - Birthplace of Buddha</a>
+                            <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 hover:text-primary">Muktinath Temple</a>
+                            <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 hover:text-primary">Swayambhunath Stupa</a>
+                            <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 hover:text-primary">Boudhanath Stupa</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="font-medium text-gray-800 hover:text-primary transition flex items-center">
+                            Packages <i class="ri-arrow-down-s-line ml-1"></i>
+                        </a>
+                        <div class="dropdown-content bg-white mt-2">
+                            <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 hover:text-primary">7-Day Buddhist Circuit</a>
+                            <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 hover:text-primary">10-Day Hindu Pilgrimage</a>
+                            <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 hover:text-primary">14-Day Spiritual Journey</a>
+                            <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-100 hover:text-primary">5-Day Kathmandu Valley Temples</a>
+                        </div>
+                    </li>
+                    <li><a href="#" class="font-medium text-gray-800 hover:text-primary transition">About Us</a></li>
+                    <li><a href="#" class="font-medium text-gray-800 hover:text-primary transition">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <input type="text" placeholder="Search..." class="py-2 pl-10 pr-4 w-40 lg:w-56 rounded-full text-sm border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary">
+                    <div class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-400">
+                        <i class="ri-search-line"></i>
+                    </div>
+                </div>
+                <button class="bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-primary/90 transition whitespace-nowrap hidden md:block">Book Now</button>
+                
+                <!-- Hamburger Menu -->
+                <button class="hamburger w-10 h-10 flex items-center justify-center">
+                    <i class="ri-menu-line text-2xl text-gray-700"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+       
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-20 relative">
+        <div style="background-image: url('https://readdy.ai/api/search-image?query=Beautiful%20panoramic%20view%20of%20ancient%20temples%20and%20stupas%20in%20Nepal%20with%20mountains%20in%20the%20background%2C%20golden%20hour%20lighting%2C%20atmospheric%20mist%2C%20spiritual%20ambiance%2C%20prayer%20flags%2C%20serene%20landscape%2C%20high-quality%20professional%20photography%20with%20dramatic%20lighting%20and%20shadows%2C%20no%20people%20visible%2C%20peaceful%20and%20tranquil%20scene&width=1600&height=800&seq=1&orientation=landscape'); background-size: cover; background-position: center;" class="w-full h-[600px] relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
+            <div class="container mx-auto px-4 h-full flex items-center">
+                <div class="max-w-xl text-white relative z-10">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Sacred Journeys in Nepal</h1>
+                    <p class="text-lg md:text-xl mb-8">Discover spiritual enlightenment in the land of ancient temples, sacred rivers, and mystical mountains.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition whitespace-nowrap !rounded-button">Explore Packages</button>
+                        <button class="bg-white text-gray-800 px-6 py-3 rounded-button font-medium hover:bg-gray-100 transition whitespace-nowrap !rounded-button">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Destinations -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Sacred Destinations</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore Nepal's most revered pilgrimage sites, each with its own spiritual significance and ancient history.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Destination 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Pashupatinath%20Temple%20in%20Kathmandu%2C%20Nepal%2C%20ancient%20Hindu%20temple%20complex%20on%20the%20banks%20of%20the%20Bagmati%20River%2C%20ornate%20architecture%2C%20golden%20details%2C%20religious%20ceremonies%2C%20soft%20morning%20light%2C%20mist%20rising%20from%20the%20river%2C%20devotees%20praying%2C%20professional%20photography%20with%20rich%20details%20and%20colors&width=600&height=400&seq=2&orientation=landscape" alt="Pashupatinath Temple" class="w-full h-full object-cover object-top transition duration-300 hover:scale-105">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold mb-2">Pashupatinath Temple</h3>
+                        <p class="text-gray-600 mb-4">One of the most sacred Hindu temples dedicated to Lord Shiva, located on the banks of the Bagmati River in Kathmandu.</p>
+                        <a href="#" class="text-primary font-medium hover:underline flex items-center">
+                            Learn More <i class="ri-arrow-right-line ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Destination 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Lumbini%2C%20birthplace%20of%20Buddha%20in%20Nepal%2C%20peaceful%20gardens%2C%20Maya%20Devi%20Temple%2C%20sacred%20pond%2C%20ancient%20ruins%2C%20Buddhist%20pilgrims%2C%20prayer%20flags%2C%20meditation%20areas%2C%20serene%20atmosphere%2C%20soft%20natural%20lighting%2C%20professional%20photography%20with%20spiritual%20ambiance%20and%20historical%20significance&width=600&height=400&seq=3&orientation=landscape" alt="Lumbini" class="w-full h-full object-cover object-top transition duration-300 hover:scale-105">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold mb-2">Lumbini</h3>
+                        <p class="text-gray-600 mb-4">The birthplace of Lord Buddha, featuring the sacred Maya Devi Temple, ancient ruins, and peaceful meditation gardens.</p>
+                        <a href="#" class="text-primary font-medium hover:underline flex items-center">
+                            Learn More <i class="ri-arrow-right-line ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Destination 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Muktinath%20Temple%20in%20Nepal%2C%20high%20Himalayan%20mountains%20in%20background%2C%20sacred%20shrine%20with%20108%20water%20spouts%2C%20eternal%20flame%2C%20pilgrims%20performing%20rituals%2C%20prayer%20flags%2C%20dramatic%20mountain%20landscape%2C%20clear%20blue%20sky%2C%20professional%20photography%20with%20stunning%20mountain%20vistas%20and%20spiritual%20significance&width=600&height=400&seq=4&orientation=landscape" alt="Muktinath Temple" class="w-full h-full object-cover object-top transition duration-300 hover:scale-105">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold mb-2">Muktinath Temple</h3>
+                        <p class="text-gray-600 mb-4">A sacred place for both Hindus and Buddhists, nestled in the Himalayas with 108 water spouts and an eternal natural flame.</p>
+                        <a href="#" class="text-primary font-medium hover:underline flex items-center">
+                            Learn More <i class="ri-arrow-right-line ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Destination 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=Boudhanath%20Stupa%20in%20Kathmandu%2C%20Nepal%2C%20massive%20white%20dome%20with%20prayer%20flags%2C%20Buddha%20eyes%20painted%20on%20all%20sides%2C%20pilgrims%20circumambulating%2C%20monks%20in%20red%20robes%2C%20incense%20burning%2C%20golden%20spire%2C%20evening%20light%2C%20professional%20photography%20with%20cultural%20details%20and%20spiritual%20atmosphere&width=600&height=400&seq=5&orientation=landscape" alt="Boudhanath Stupa" class="w-full h-full object-cover object-top transition duration-300 hover:scale-105">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold mb-2">Boudhanath Stupa</h3>
+                        <p class="text-gray-600 mb-4">One of the largest spherical stupas in Nepal, rich in Buddhist symbolism with the all-seeing eyes of Buddha gazing in four directions.</p>
+                        <a href="#" class="text-primary font-medium hover:underline flex items-center">
+                            Learn More <i class="ri-arrow-right-line ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="#" class="inline-block bg-white text-primary border border-primary px-6 py-3 rounded-button font-medium hover:bg-primary/5 transition whitespace-nowrap !rounded-button">View All Destinations</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Why Choose Our Pilgrimage Tours</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We provide authentic spiritual experiences with expert guides who understand the cultural and religious significance of each sacred site.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Benefit 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="ri-compass-3-line text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Expert Spiritual Guides</h3>
+                    <p class="text-gray-600">Our guides are knowledgeable about religious practices, rituals, and the historical significance of each sacred site.</p>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="ri-hotel-line text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Comfortable Accommodations</h3>
+                    <p class="text-gray-600">Stay in carefully selected hotels and guesthouses that respect spiritual practices while providing comfort.</p>
+                </div>
+                
+                <!-- Benefit 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="ri-heart-line text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Authentic Experiences</h3>
+                    <p class="text-gray-600">Participate in genuine rituals and ceremonies with local communities for a truly immersive spiritual journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Packages -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Popular Pilgrimage Packages</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Carefully crafted spiritual journeys to Nepal's most sacred sites, with expert guides and authentic experiences.</p>
+            </div>
+            
+            <div class="flex justify-center mb-8">
+                <div class="inline-flex bg-gray-100 p-1 rounded-full">
+                    <button class="px-4 py-2 rounded-full bg-primary text-white font-medium whitespace-nowrap">All Packages</button>
+                    <button class="px-4 py-2 rounded-full text-gray-700 font-medium hover:bg-gray-200 whitespace-nowrap">Buddhist</button>
+                    <button class="px-4 py-2 rounded-full text-gray-700 font-medium hover:bg-gray-200 whitespace-nowrap">Hindu</button>
+                    <button class="px-4 py-2 rounded-full text-gray-700 font-medium hover:bg-gray-200 whitespace-nowrap">Mixed</button>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Package 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition border border-gray-100">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="https://readdy.ai/api/search-image?query=Buddhist%20pilgrimage%20sites%20in%20Nepal%2C%20stupas%2C%20monasteries%2C%20prayer%20wheels%2C%20monks%20in%20red%20robes%2C%20prayer%20flags%2C%20incense%2C%20peaceful%20gardens%2C%20mountains%20in%20background%2C%20spiritual%20atmosphere%2C%20professional%20photography%20with%20rich%20cultural%20details%20and%20serene%20ambiance&width=600&height=400&seq=6&orientation=landscape" alt="Buddhist Circuit Tour" class="w-full h-full object-cover object-top transition duration-300 hover:scale-105">
+                        <div class="absolute top-4 right-4 bg-primary text-white text-sm font-medium px-3 py-1 rounded-full">7 Days</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Buddhist Circuit Tour</h3>
+                        <ul class="mb-4 space-y-2">
+                            <li class="flex items-start">
+                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                <span class="text-gray-600">Visit to Lumbini, birthplace of Buddha</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                <span class="text-gray-600">Explore Boudhanath & Swayambhunath Stupas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                <span class="text-gray-600">Meditation sessions with Buddhist monks</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                <span class="text-gray-600">Traditional Buddhist ceremonies</span>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <div class="text-primary font-bold text-xl">$899 <span class="text-gray-500 text-sm font-normal">per person</span></div>
+                            <button class="bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-primary/90 transition whitespace-nowrap !rounded-button">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Package 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition border border-gray-100">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="https://readdy.ai/api/search-image?query=Hindu%20temples%20in%20Nepal%2C%20ornate%20architecture%2C%20golden%20details%2C%20religious%20ceremonies%2C%20priests%20performing%20rituals%2C%20devotees%20praying%2C%20sacred%20rivers%2C%20incense%20burning%2C%20colorful%20offerings%2C%20professional%20photography%20with%20rich%20cultural%20details%20and%20spiritual%20atmosphere&width=600&height=400&seq=7&orientation=landscape" alt="Hindu Pilgrimage Tour" class="w-full h-full object-cover object-top transition duration-300 hover:scale-105">
+                        <div class="absolute top-4 right-4 bg-primary text-white text-sm font-medium px-3 py-1 rounded-full">10 Days</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Hindu Pilgrimage Tour</h3>
+                        <ul class="mb-4 space-y-2">
+                            <li class="flex items-start">
+                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                <span class="text-gray-600">Pashupatinath Temple ceremonies</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                <span class="text-gray-600">Sacred bath in Bagmati River</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                <span class="text-gray-600">Visit to Muktinath & Manakamana</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                <span class="text-gray-600">Traditional puja ceremonies</span>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <div class="text-primary font-bold text-xl">$1,299 <span class="text-gray-500 text-sm font-normal">per person</span></div>
+                            <button class="bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-primary/90 transition whitespace-nowrap !rounded-button">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Package 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition border border-gray-100">
+                    <div class="h-60 overflow-hidden relative">
+                        <img src="https://readdy.ai/api/search-image?query=Nepal%20spiritual%20journey%2C%20mix%20of%20temples%20and%20stupas%2C%20mountains%2C%20prayer%20flags%2C%20local%20people%2C%20traditional%20architecture%2C%20serene%20landscapes%2C%20sacred%20sites%2C%20pilgrims%2C%20professional%20photography%20with%20dramatic%20lighting%2C%20spiritual%20atmosphere%20and%20cultural%20richness&width=600&height=400&seq=8&orientation=landscape" alt="Complete Spiritual Journey" class="w-full h-full object-cover object-top transition duration-300 hover:scale-105">
+                        <div class="absolute top-4 right-4 bg-primary text-white text-sm font-medium px-3 py-1 rounded-full">14 Days</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Complete Spiritual Journey</h3>
+                        <ul class="mb-4 space-y-2">
+                            <li class="flex items-start">
+                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                <span class="text-gray-600">Comprehensive tour of Hindu & Buddhist sites</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                <span class="text-gray-600">Meditation retreat in Himalayan monastery</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                <span class="text-gray-600">Sacred valley of Kathmandu exploration</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                <span class="text-gray-600">Meeting with spiritual leaders</span>
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <div class="text-primary font-bold text-xl">$1,899 <span class="text-gray-500 text-sm font-normal">per person</span></div>
+                            <button class="bg-primary text-white px-4 py-2 rounded-button font-medium hover:bg-primary/90 transition whitespace-nowrap !rounded-button">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="#" class="inline-block bg-white text-primary border border-primary px-6 py-3 rounded-button font-medium hover:bg-primary/5 transition whitespace-nowrap !rounded-button">View All Packages</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">What Our Pilgrims Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Read about the transformative experiences of travelers who have embarked on spiritual journeys with us.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-primary">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The Buddhist Circuit tour was truly life-changing. Our guide was incredibly knowledgeable about Buddhist philosophy and made each site come alive with stories and context. The meditation sessions with the monks were profound experiences I'll never forget."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center mr-4">
+                            <i class="ri-user-3-line text-gray-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Emma Richardson</h4>
+                            <p class="text-gray-500 text-sm">from United Kingdom</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-primary">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"As a devout Hindu, visiting Pashupatinath and Muktinath with this tour company was a dream come true. The arrangements were flawless, and they ensured we could participate in all the important rituals. The guides understood the spiritual significance of each site."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center mr-4">
+                            <i class="ri-user-3-line text-gray-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Rajesh Sharma</h4>
+                            <p class="text-gray-500 text-sm">from India</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-primary">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-fill"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The Complete Spiritual Journey was worth every penny. We experienced both Hindu and Buddhist traditions, met with spiritual leaders, and had time for personal reflection. The accommodations were comfortable and the food was excellent. Highly recommended!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center mr-4">
+                            <i class="ri-user-3-line text-gray-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Michael Donovan</h4>
+                            <p class="text-gray-500 text-sm">from Australia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary/10">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-6">Begin Your Spiritual Journey Today</h2>
+                <p class="text-gray-600 mb-8 text-lg">Let us guide you through Nepal's sacred sites for a transformative experience that will nourish your soul and deepen your spiritual practice.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button class="bg-primary text-white px-8 py-4 rounded-button font-medium hover:bg-primary/90 transition whitespace-nowrap !rounded-button">Book a Consultation</button>
+                    <button class="bg-white text-primary border border-primary px-8 py-4 rounded-button font-medium hover:bg-primary/5 transition whitespace-nowrap !rounded-button">Download Brochure</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-xl font-['Pacifico'] text-primary mb-6">Nepal Pilgrimage Tours</h3>
+                    <p class="text-gray-400 mb-6">Providing authentic spiritual journeys to Nepal's sacred sites since 2005. We specialize in creating meaningful pilgrimages that respect local traditions.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-twitter-x-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition">
+                            <i class="ri-youtube-line"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Destinations</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Packages</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Testimonials</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact Us</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mt-1 mr-3 text-primary">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span class="text-gray-400">Thamel, Kathmandu, Nepal</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mt-1 mr-3 text-primary">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            <span class="text-gray-400">+977 1 4700721</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mt-1 mr-3 text-primary">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <span class="text-gray-400">info@nepalpilgrimagetours.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center mt-1 mr-3 text-primary">
+                                <i class="ri-time-line"></i>
+                            </div>
+                            <span class="text-gray-400">Mon-Fri: 9:00 AM - 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Subscribe to Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Stay updated with our latest packages and spiritual insights.</p>
+                    <form class="mb-4">
+                        <div class="flex">
+                            <input type="email" placeholder="Your email address" class="bg-gray-800 text-white px-4 py-3 rounded-l-button w-full border-none focus:outline-none focus:ring-2 focus:ring-primary/20">
+                            <button type="submit" class="bg-primary text-white px-4 py-3 rounded-r-button font-medium hover:bg-primary/90 transition whitespace-nowrap">Subscribe</button>
+                        </div>
+                    </form>
+                    <div class="flex space-x-3">
+                        <div class="w-10 h-6 flex items-center justify-center">
+                            <i class="ri-visa-fill text-2xl text-gray-400"></i>
+                        </div>
+                        <div class="w-10 h-6 flex items-center justify-center">
+                            <i class="ri-mastercard-fill text-2xl text-gray-400"></i>
+                        </div>
+                        <div class="w-10 h-6 flex items-center justify-center">
+                            <i class="ri-paypal-fill text-2xl text-gray-400"></i>
+                        </div>
+                        <div class="w-10 h-6 flex items-center justify-center">
+                            <i class="ri-apple-fill text-2xl text-gray-400"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500 text-sm mb-4 md:mb-0">© 2025 Nepal Pilgrimage Tours. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-500 text-sm hover:text-white transition">Privacy Policy</a>
+                        <a href="#" class="text-gray-500 text-sm hover:text-white transition">Terms of Service</a>
+                        <a href="#" class="text-gray-500 text-sm hover:text-white transition">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            hamburger.addEventListener('click', function() {
+                mobileMenu.classList.toggle('active');
+                
+                if (mobileMenu.classList.contains('active')) {
+                    hamburger.innerHTML = '<i class="ri-close-line text-2xl text-gray-700"></i>';
+                } else {
+                    hamburger.innerHTML = '<i class="ri-menu-line text-2xl text-gray-700"></i>';
+                }
+            });
+            
+            // Mobile dropdown toggles
+            const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+            
+            mobileDropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const dropdown = this.nextElementSibling;
+                    dropdown.classList.toggle('active');
+                    
+                    const icon = this.querySelector('i');
+                    if (dropdown.classList.contains('active')) {
+                        icon.classList.remove('ri-arrow-down-s-line');
+                        icon.classList.add('ri-arrow-up-s-line');
+                    } else {
+                        icon.classList.remove('ri-arrow-up-s-line');
+                        icon.classList.add('ri-arrow-down-s-line');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

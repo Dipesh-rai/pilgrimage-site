@@ -1,0 +1,94 @@
+footer {
+    background-color: var(--secondary-color);
+    padding: 30px 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+
+    .footer-content {
+        padding-bottom:30px;
+        padding-inline:0;
+        border-bottom:1px solid rgb(128, 126, 126);
+        .header {
+            font-family: var(--join-fonts);
+            font-size: var(--font-xxl) !important;
+            color: var(--primary-color);
+        }
+
+        .media {
+            padding: 0;
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            font-size: var(--font-lg);
+            background-color: rgba(182, 172, 172, 0.151);
+            @include flex-center;
+
+            &:hover {
+                background-color: var(--primary-color);
+            }
+        }
+
+        .content-footer {
+            // line-height: 2;
+        }
+
+        .link-heading {
+            font-family: var(--secondary-font);
+            color: white;
+            font-size: var(--font-xl);
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+
+        ul {
+            padding: 0;
+
+            li {
+                padding: 10px 0;
+
+                a {
+                    position: relative;
+
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        width: 0;
+                        height: 2px;
+                        top: 80%;
+                        left: 0;
+                        transition: 0.5s;
+                        background-color: var(--primary-color);
+                    }
+
+                    &:hover::before {
+                        color: var(--primary-color);
+                        width: 100%;
+                    }
+
+                    &:hover {
+                        color: var(--primary-color) !important;
+                    }
+                }
+            }
+        }
+
+        i {
+            color: white;
+            font-size: var(--font-md);
+            padding-top: 5px;
+        }
+
+        .contact-items {
+            @include flex-center;
+        }
+    }
+    .fotter-bottom{
+        a{
+            &:hover{
+                color:var(--primary-color) !important;
+            }
+        }
+    }
+
+
+}

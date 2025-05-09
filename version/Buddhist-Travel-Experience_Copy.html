@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoulPath - Nepal Buddhist Spiritual Journeys</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#DAA520', secondary: '#8B7355' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+   
+   <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fade-in 1s ease-out;
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        body {
+            font-family: 'Nunito Sans', sans-serif;
+            color: #2F4F4F;
+            background-color: #F5F5DC;
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-link::after {
+            bottom: -2px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://readdy.ai/api/search-image?query=Majestic%20Buddhist%20monastery%20perched%20on%20mountain%20cliff%20at%20golden%20hour%2C%20dramatic%20Himalayan%20peaks%20in%20background%2C%20prayer%20flags%20fluttering%2C%20mist%20in%20valleys%2C%20ancient%20architecture%2C%20spiritual%20atmosphere%2C%20path%20leading%20to%20entrance%2C%20natural%20beauty%2C%20cinematic%20wide%20shot&width=1600&height=800&seq=123456&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #DAA520;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .tour-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .testimonial-slider {
+            scroll-snap-type: x mandatory;
+        }
+
+        .testimonial-slide {
+            scroll-snap-align: center;
+        }
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .custom-checkbox {
+            position: relative;
+            padding-left: 30px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .custom-checkbox input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #fff;
+            border: 2px solid #8B7355;
+            border-radius: 4px;
+        }
+
+        .custom-checkbox input:checked~.checkmark {
+            background-color: #DAA520;
+            border-color: #DAA520;
+        }
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .custom-checkbox input:checked~.checkmark:after {
+            display: block;
+        }
+
+        .custom-checkbox .checkmark:after {
+            left: 6px;
+            top: 2px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-transparent z-50 transition-all duration-300" id="header">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="#" class="font-['Pacifico'] text-3xl text-primary">SoulPath</a>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="nav-link text-white hover:text-primary transition-colors">Home</a>
+                    <div class="relative group">
+                        <button class="nav-link text-white hover:text-primary transition-colors flex items-center">
+                            Sacred Sites
+                            <div class="w-5 h-5 flex items-center justify-center ml-1">
+                                <i class="ri-arrow-down-s-line"></i>
+                            </div>
+                        </button>
+                        <div
+                            class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0">
+                            <div class="p-4">
+                                <a href="#lumbini"
+                                    class="flex items-center p-3 rounded-lg hover:bg-[#F5F5DC] transition-colors">
+                                    <div
+                                        class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary">
+                                        <i class="ri-ancient-pavilion-line"></i>
+                                    </div>
+                                    <div class="ml-3">
+                                        <h4 class="text-[#2F4F4F] font-medium">Lumbini</h4>
+                                        <p class="text-sm text-[#2F4F4F]/70">Birthplace of Buddha</p>
+                                    </div>
+                                </a>
+                                <a href="#boudhanath"
+                                    class="flex items-center p-3 rounded-lg hover:bg-[#F5F5DC] transition-colors">
+                                    <div
+                                        class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary">
+                                        <i class="ri-ancient-gate-line"></i>
+                                    </div>
+                                    <div class="ml-3">
+                                        <h4 class="text-[#2F4F4F] font-medium">Boudhanath</h4>
+                                        <p class="text-sm text-[#2F4F4F]/70">Sacred Stupa</p>
+                                    </div>
+                                </a>
+                                <a href="#swayambhunath"
+                                    class="flex items-center p-3 rounded-lg hover:bg-[#F5F5DC] transition-colors">
+                                    <div
+                                        class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary">
+                                        <i class="ri-building-line"></i>
+                                    </div>
+                                    <div class="ml-3">
+                                        <h4 class="text-[#2F4F4F] font-medium">Swayambhunath</h4>
+                                        <p class="text-sm text-[#2F4F4F]/70">Monkey Temple</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="nav-link text-white hover:text-primary transition-colors flex items-center">
+                            Tours
+                            <div class="w-5 h-5 flex items-center justify-center ml-1">
+                                <i class="ri-arrow-down-s-line"></i>
+                            </div>
+                        </button>
+                        <div
+                            class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0">
+                            <div class="p-4">
+                                <a href="#himalayan"
+                                    class="flex items-center p-3 rounded-lg hover:bg-[#F5F5DC] transition-colors">
+                                    <div
+                                        class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary">
+                                        <i class="ri-road-map-line"></i>
+                                    </div>
+                                    <div class="ml-3">
+                                        <h4 class="text-[#2F4F4F] font-medium">Himalayan Journey</h4>
+                                        <p class="text-sm text-[#2F4F4F]/70">14 Days Adventure</p>
+                                    </div>
+                                </a>
+                                <a href="#meditation"
+                                    class="flex items-center p-3 rounded-lg hover:bg-[#F5F5DC] transition-colors">
+                                    <div
+                                        class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary">
+                                        <i class="ri-mental-health-line"></i>
+                                    </div>
+                                    <div class="ml-3">
+                                        <h4 class="text-[#2F4F4F] font-medium">Meditation Tour</h4>
+                                        <p class="text-sm text-[#2F4F4F]/70">10 Days Retreat</p>
+                                    </div>
+                                </a>
+                                <a href="#cultural"
+                                    class="flex items-center p-3 rounded-lg hover:bg-[#F5F5DC] transition-colors">
+                                    <div
+                                        class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary">
+                                        <i class="ri-ancient-gate-line"></i>
+                                    </div>
+                                    <div class="ml-3">
+                                        <h4 class="text-[#2F4F4F] font-medium">Cultural Tour</h4>
+                                        <p class="text-sm text-[#2F4F4F]/70">7 Days Experience</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button class="nav-link text-white hover:text-primary transition-colors flex items-center">
+                            Retreats
+                            <div class="w-5 h-5 flex items-center justify-center ml-1">
+                                <i class="ri-arrow-down-s-line"></i>
+                            </div>
+                        </button>
+                        <div
+                            class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0">
+                            <div class="p-4">
+                                <a href="#vipassana"
+                                    class="flex items-center p-3 rounded-lg hover:bg-[#F5F5DC] transition-colors">
+                                    <div
+                                        class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary">
+                                        <i class="ri-mental-health-line"></i>
+                                    </div>
+                                    <div class="ml-3">
+                                        <h4 class="text-[#2F4F4F] font-medium">Vipassana</h4>
+                                        <p class="text-sm text-[#2F4F4F]/70">Silent Meditation</p>
+                                    </div>
+                                </a>
+                                <a href="#zen"
+                                    class="flex items-center p-3 rounded-lg hover:bg-[#F5F5DC] transition-colors">
+                                    <div
+                                        class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary">
+                                        <i class="ri-lotus-line"></i>
+                                    </div>
+                                    <div class="ml-3">
+                                        <h4 class="text-[#2F4F4F] font-medium">Zen Practice</h4>
+                                        <p class="text-sm text-[#2F4F4F]/70">Mindfulness Training</p>
+                                    </div>
+                                </a>
+                                <a href="#tibetan"
+                                    class="flex items-center p-3 rounded-lg hover:bg-[#F5F5DC] transition-colors">
+                                    <div
+                                        class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary">
+                                        <i class="ri-moon-line"></i>
+                                    </div>
+                                    <div class="ml-3">
+                                        <h4 class="text-[#2F4F4F] font-medium">Tibetan Practice</h4>
+                                        <p class="text-sm text-[#2F4F4F]/70">Traditional Methods</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#about" class="nav-link text-white hover:text-primary transition-colors">About Us</a>
+                    <a href="#contact" class="nav-link text-white hover:text-primary transition-colors">Contact</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <button class="flex items-center text-white hover:text-primary transition-colors">
+                            <span>EN</span>
+                            <div class="w-5 h-5 flex items-center justify-center ml-1">
+                                <i class="ri-arrow-down-s-line"></i>
+                            </div>
+                        </button>
+                    </div>
+                    <a href="https://readdy.ai/home/60dd0683-f623-4dab-a33e-57338195e117/a3d50e07-bb0d-454d-ae82-1c7e44d0a819"
+                        data-readdy="true" title="View Spiritual Journey Details"
+                        aria-label="View details about Buddhist spiritual journeys and meditation retreats">
+                        <button
+                            class="bg-primary text-white px-5 py-2 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all">View
+                            Journey</button>
+                    </a>
+                    <div class="md:hidden w-6 h-6 flex items-center justify-center cursor-pointer"
+                        id="mobile-menu-button">
+                        <i class="ri-menu-line text-white text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Mobile Menu -->
+    <div class="fixed inset-0 bg-[#2F4F4F] z-40 transform translate-x-full transition-transform duration-300 ease-in-out"
+        id="mobile-menu">
+        <div class="flex justify-end p-6">
+            <div class="w-6 h-6 flex items-center justify-center cursor-pointer" id="close-menu-button">
+                <i class="ri-close-line text-white text-2xl"></i>
+            </div>
+        </div>
+        <div class="flex flex-col items-center space-y-6 mt-10">
+            <a href="#" class="text-white text-xl hover:text-primary transition-colors">Home</a>
+            <a href="#sacred-sites" class="text-white text-xl hover:text-primary transition-colors">Sacred Sites</a>
+            <a href="#tours" class="text-white text-xl hover:text-primary transition-colors">Tours</a>
+            <a href="#retreats" class="text-white text-xl hover:text-primary transition-colors">Meditation Retreats</a>
+            <a href="#about" class="text-white text-xl hover:text-primary transition-colors">About Us</a>
+            <a href="#contact" class="text-white text-xl hover:text-primary transition-colors">Contact</a>
+            <button
+                class="mt-8 bg-primary text-white px-8 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all">Book
+                Now</button>
+        </div>
+    </div>
+    <!-- Hero Section -->
+    <section class="hero-section w-full h-[85vh] flex items-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
+        <div
+            class="absolute inset-0 bg-[url('https://readdy.ai/api/search-image?query=Majestic%20Buddhist%20monastery%20perched%20on%20mountain%20cliff%20at%20golden%20hour%2C%20dramatic%20Himalayan%20peaks%20in%20background%2C%20prayer%20flags%20fluttering%2C%20mist%20in%20valleys%2C%20ancient%20architecture%2C%20spiritual%20atmosphere%2C%20path%20leading%20to%20entrance%2C%20natural%20beauty%2C%20cinematic%20wide%20shot%2C%20ethereal%20lighting%2C%20peaceful%20environment&width=1920&height=1080&seq=123456&orientation=landscape')] bg-cover bg-center">
+        </div>
+        <div class="container mx-auto px-6 w-full relative">
+            <div class="max-w-2xl">
+                <span
+                    class="inline-block bg-primary/90 text-white px-6 py-2 !rounded-full text-sm mb-6 backdrop-blur-sm shadow-lg transform hover:scale-105 transition-all">Discover
+                    Inner Peace</span>
+                <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-4 animate-fade-in">Sacred Journey
+                    Through Nepal</h1>
+                <p
+                    class="text-xl text-white mt-6 leading-relaxed font-light backdrop-blur-sm bg-black/10 p-6 rounded-lg inline-block">
+                    Experience the birthplace of Buddha and discover ancient monasteries in the heart of the Himalayas.
+                </p>
+                <div class="mt-12 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                    <button
+                        class="bg-primary text-white px-8 py-4 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all text-lg group flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        Explore Tours
+                        <div
+                            class="w-6 h-6 flex items-center justify-center ml-2 group-hover:translate-x-2 transition-transform">
+                            <i class="ri-arrow-right-line"></i>
+                        </div>
+                    </button>
+                    <button
+                        class="glass-effect text-white px-8 py-4 !rounded-button whitespace-nowrap hover:bg-white/20 transition-all text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">Learn
+                        More</button>
+                </div>
+                <div class="mt-16 flex items-center space-x-8 animate-fade-in" style="animation-delay: 0.5s;">
+                    <div class="glass-effect rounded-lg px-6 py-4 flex items-center space-x-4">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/20 rounded-full">
+                            <i class="ri-group-line text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold">Small Groups</h4>
+                            <p class="text-white/80 text-sm">Personal attention guaranteed</p>
+                        </div>
+                    </div>
+                    <div class="glass-effect rounded-lg px-6 py-4 flex items-center space-x-4">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/20 rounded-full">
+                            <i class="ri-shield-star-line text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold">Expert Guides</h4>
+                            <p class="text-white/80 text-sm">Buddhist scholars & practitioners</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 flex items-center space-x-8">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full text-white">
+                            <i class="ri-group-line text-xl"></i>
+                        </div>
+                        <span class="ml-3 text-white">Small Groups</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full text-white">
+                            <i class="ri-shield-star-line text-xl"></i>
+                        </div>
+                        <span class="ml-3 text-white">Expert Guides</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Why Choose SoulPath</h2>
+                <p class="text-lg max-w-2xl mx-auto text-[#2F4F4F]/80">Experience the difference of mindful travel with
+                    our expertly curated Buddhist journeys and dedicated team.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div
+                    class="text-center p-6 bg-[#F5F5DC]/50 rounded-lg hover:transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-heart-line text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Authentic Experiences</h3>
+                    <p class="text-[#2F4F4F]/80">Direct connections with monasteries and Buddhist masters for genuine
+                        spiritual experiences.</p>
+                </div>
+                <div
+                    class="text-center p-6 bg-[#F5F5DC]/50 rounded-lg hover:transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-shield-star-line text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Expert Guidance</h3>
+                    <p class="text-[#2F4F4F]/80">Knowledgeable guides with deep understanding of Buddhist traditions and
+                        practices.</p>
+                </div>
+                <div
+                    class="text-center p-6 bg-[#F5F5DC]/50 rounded-lg hover:transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-group-line text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Small Groups</h3>
+                    <p class="text-[#2F4F4F]/80">Intimate group sizes ensuring personal attention and deeper
+                        connections.</p>
+                </div>
+                <div
+                    class="text-center p-6 bg-[#F5F5DC]/50 rounded-lg hover:transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-hand-heart-line text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Responsible Travel</h3>
+                    <p class="text-[#2F4F4F]/80">Sustainable practices and support for local Buddhist communities.</p>
+                </div>
+            </div>
+            <div class="mt-16 bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="flex flex-col lg:flex-row">
+                    <div class="w-full lg:w-1/2 p-8 lg:p-12">
+                        <h3 class="text-2xl font-bold mb-6">Our Commitment to Authentic Buddhist Travel</h3>
+                        <p class="mb-6 text-[#2F4F4F]/80">With over a decade of experience, we've built strong
+                            relationships with Buddhist communities across Asia. Our journeys are thoughtfully designed
+                            to provide:</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="w-6 h-6 flex items-center justify-center mt-1">
+                                    <i class="ri-check-line text-primary"></i>
+                                </div>
+                                <span class="ml-3">Direct access to authentic Buddhist teachings and practices</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-6 h-6 flex items-center justify-center mt-1">
+                                    <i class="ri-check-line text-primary"></i>
+                                </div>
+                                <span class="ml-3">Carefully selected accommodation in or near spiritual sites</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-6 h-6 flex items-center justify-center mt-1">
+                                    <i class="ri-check-line text-primary"></i>
+                                </div>
+                                <span class="ml-3">Balanced itineraries with time for practice and reflection</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-6 h-6 flex items-center justify-center mt-1">
+                                    <i class="ri-check-line text-primary"></i>
+                                </div>
+                                <span class="ml-3">Support for local Buddhist initiatives and communities</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <img src="https://readdy.ai/api/search-image?query=Buddhist%20monastery%20courtyard%20with%20monks%20in%20traditional%20robes%2C%20peaceful%20atmosphere%2C%20ancient%20architecture%2C%20prayer%20flags%2C%20morning%20light%2C%20misty%20mountains%20in%20background%2C%20spiritual%20practice%2C%20authentic%20cultural%20scene%2C%20high%20quality%20photography&width=800&height=600&seq=123467&orientation=landscape"
+                            alt="Authentic Buddhist Experience" class="w-full h-full object-cover object-top">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Featured Destinations -->
+    <section id="sacred-sites" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Sacred Sites of Nepal</h2>
+                <p class="text-lg max-w-2xl mx-auto text-[#2F4F4F]/80">Explore Nepal's most revered Buddhist sites, from
+                    the birthplace of Buddha in Lumbini to ancient monasteries nestled in the Himalayas.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                    class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2">
+                    <img src="https://readdy.ai/api/search-image?query=Lumbini%20Nepal%2C%20birthplace%20of%20Buddha%2C%20sacred%20garden%20with%20ancient%20ruins%2C%20peaceful%20ponds%20with%20lotus%20flowers%2C%20meditation%20areas%2C%20prayer%20flags%2C%20pilgrims%20walking%2C%20traditional%20architecture%2C%20natural%20lighting%2C%20spiritual%20atmosphere%2C%20UNESCO%20world%20heritage%20site&width=600&height=400&seq=123457&orientation=landscape"
+                        alt="Lumbini"
+                        class="w-full h-80 object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-2xl font-bold">Lumbini</h3>
+                        <p class="mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">The sacred
+                            birthplace of Buddha, featuring ancient ruins, monasteries, and the sacred Mayadevi Temple.
+                        </p>
+                        <a href="#" class="mt-4 inline-flex items-center text-primary hover:underline">
+                            Learn More
+                            <div class="w-5 h-5 flex items-center justify-center ml-1">
+                                <i class="ri-arrow-right-line"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2">
+                    <img src="https://readdy.ai/api/search-image?query=Boudhanath%20Stupa%20Kathmandu%20Nepal%2C%20massive%20white%20dome%20with%20prayer%20flags%2C%20golden%20spire%2C%20pilgrims%20circumambulating%2C%20monks%20in%20robes%2C%20traditional%20Tibetan%20architecture%2C%20spiritual%20atmosphere%2C%20sunset%20lighting%2C%20peaceful%20environment&width=600&height=400&seq=123458&orientation=landscape"
+                        alt="Boudhanath"
+                        class="w-full h-80 object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-2xl font-bold">Boudhanath Stupa</h3>
+                        <p class="mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">One of the
+                            largest stupas in the world, a center of Tibetan Buddhism with daily rituals and meditation
+                            practices.</p>
+                        <a href="#" class="mt-4 inline-flex items-center text-primary hover:underline">
+                            Learn More
+                            <div class="w-5 h-5 flex items-center justify-center ml-1">
+                                <i class="ri-arrow-right-line"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="group relative overflow-hidden rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2">
+                    <img src="https://readdy.ai/api/search-image?query=Swayambhunath%20temple%20Kathmandu%20Nepal%2C%20ancient%20hilltop%20stupa%2C%20golden%20spire%2C%20prayer%20wheels%2C%20monkeys%2C%20steep%20stone%20steps%2C%20panoramic%20city%20views%2C%20prayer%20flags%2C%20traditional%20architecture%2C%20spiritual%20atmosphere%2C%20morning%20mist&width=600&height=400&seq=123459&orientation=landscape"
+                        alt="Swayambhunath"
+                        class="w-full h-80 object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-2xl font-bold">Swayambhunath</h3>
+                        <p class="mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">The ancient
+                            'Monkey Temple' offering panoramic views of Kathmandu Valley and rich Buddhist symbolism.
+                        </p>
+                        <a href="#" class="mt-4 inline-flex items-center text-primary hover:underline">
+                            Learn More
+                            <div class="w-5 h-5 flex items-center justify-center ml-1">
+                                <i class="ri-arrow-right-line"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <button
+                    class="border-2 border-secondary text-secondary px-8 py-3 !rounded-button whitespace-nowrap hover:bg-secondary hover:text-white transition-all">View
+                    All Sacred Sites</button>
+            </div>
+        </div>
+    </section>
+    <!-- Interactive Map Section -->
+    <section class="py-20 bg-[#F5F5F0]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Discover Our Spiritual Journeys</h2>
+                <p class="text-lg max-w-2xl mx-auto text-[#2F4F4F]/80">Explore our curated collection of Buddhist tours
+                    across Asia and beyond, each designed to connect you with ancient wisdom and practices.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+                    <div class="w-full md:w-3/4 h-[500px] relative">
+                        <div id="map" class="w-full h-full bg-cover bg-center"
+                            style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png');">
+                        </div>
+                        <!-- Map Markers -->
+                        <div class="absolute top-1/4 left-1/3 cursor-pointer" id="marker-1">
+                            <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center animate-pulse">
+                                <div class="w-3 h-3 bg-white rounded-full"></div>
+                            </div>
+                        </div>
+                        <div class="absolute top-1/3 right-1/4 cursor-pointer" id="marker-2">
+                            <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center animate-pulse">
+                                <div class="w-3 h-3 bg-white rounded-full"></div>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-1/4 left-1/2 cursor-pointer" id="marker-3">
+                            <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center animate-pulse">
+                                <div class="w-3 h-3 bg-white rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/4 bg-white p-6 border-l border-gray-100">
+                        <h3 class="text-xl font-bold mb-4">Tour Destinations</h3>
+                        <div class="space-y-4">
+                            <div
+                                class="flex items-center p-3 rounded bg-[#F5F5DC] cursor-pointer hover:bg-[#F5F5DC]/70 transition-colors">
+                                <div
+                                    class="w-10 h-10 flex items-center justify-center bg-primary rounded-full text-white">
+                                    <i class="ri-ancient-pavilion-line"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <h4 class="font-medium">Bhutan & Nepal</h4>
+                                    <p class="text-sm text-[#2F4F4F]/70">Himalayan Monasteries</p>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center p-3 rounded cursor-pointer hover:bg-[#F5F5DC]/70 transition-colors">
+                                <div
+                                    class="w-10 h-10 flex items-center justify-center bg-secondary/80 rounded-full text-white">
+                                    <i class="ri-ancient-gate-line"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <h4 class="font-medium">Thailand & Myanmar</h4>
+                                    <p class="text-sm text-[#2F4F4F]/70">Southeast Asian Temples</p>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center p-3 rounded cursor-pointer hover:bg-[#F5F5DC]/70 transition-colors">
+                                <div
+                                    class="w-10 h-10 flex items-center justify-center bg-secondary/80 rounded-full text-white">
+                                    <i class="ri-building-line"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <h4 class="font-medium">Japan & Korea</h4>
+                                    <p class="text-sm text-[#2F4F4F]/70">Zen Buddhist Journey</p>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center p-3 rounded cursor-pointer hover:bg-[#F5F5DC]/70 transition-colors">
+                                <div
+                                    class="w-10 h-10 flex items-center justify-center bg-secondary/80 rounded-full text-white">
+                                    <i class="ri-building-4-line"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <h4 class="font-medium">Sri Lanka</h4>
+                                    <p class="text-sm text-[#2F4F4F]/70">Ancient Buddhist Sites</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <button
+                                class="w-full bg-primary text-white py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all">View
+                                All Destinations</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Tour Packages Section -->
+    <section id="tours" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Spiritual Tour Packages</h2>
+                <p class="text-lg max-w-2xl mx-auto text-[#2F4F4F]/80">Carefully curated journeys that balance spiritual
+                    practice, cultural immersion, and natural beauty.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="bg-primary text-white px-6 py-2 !rounded-full whitespace-nowrap">All Tours</button>
+                <button
+                    class="bg-[#F5F5DC] text-[#2F4F4F] px-6 py-2 !rounded-full whitespace-nowrap hover:bg-[#F5F5DC]/70 transition-colors">Meditation
+                    Focused</button>
+                <button
+                    class="bg-[#F5F5DC] text-[#2F4F4F] px-6 py-2 !rounded-full whitespace-nowrap hover:bg-[#F5F5DC]/70 transition-colors">Cultural
+                    Immersion</button>
+                <button
+                    class="bg-[#F5F5DC] text-[#2F4F4F] px-6 py-2 !rounded-full whitespace-nowrap hover:bg-[#F5F5DC]/70 transition-colors">Pilgrimage</button>
+                <button
+                    class="bg-[#F5F5DC] text-[#2F4F4F] px-6 py-2 !rounded-full whitespace-nowrap hover:bg-[#F5F5DC]/70 transition-colors">Retreat</button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Tour Card 1 -->
+                <div class="tour-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://readdy.ai/api/search-image?query=Buddhist%20pilgrimage%20in%20Nepal%2C%20prayer%20flags%2C%20ancient%20stupas%2C%20monks%20in%20traditional%20robes%2C%20beautiful%20mountain%20landscape%2C%20spiritual%20atmosphere%2C%20pilgrims%20walking%20paths%2C%20peaceful%20environment%2C%20natural%20lighting%2C%20cultural%20immersion&width=600&height=400&seq=123460&orientation=landscape"
+                            alt="Himalayan Spiritual Journey" class="w-full h-60 object-cover object-top">
+                        <div class="absolute top-4 right-4 bg-primary text-white text-sm px-3 py-1 rounded-full">14 Days
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold">Himalayan Spiritual Journey</h3>
+                            <div class="flex">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary">
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                                <span class="ml-1">4.9</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center mt-3 text-sm text-[#2F4F4F]/70">
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span class="ml-1">Nepal & Bhutan</span>
+                        </div>
+                        <p class="mt-4">Experience the spiritual heart of the Himalayas with guided meditation sessions
+                            at ancient monasteries, interactions with Buddhist monks, and breathtaking mountain treks.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-[#F5F5DC] text-[#2F4F4F] text-xs px-3 py-1 rounded-full">Meditation</span>
+                            <span class="bg-[#F5F5DC] text-[#2F4F4F] text-xs px-3 py-1 rounded-full">Cultural</span>
+                            <span class="bg-[#F5F5DC] text-[#2F4F4F] text-xs px-3 py-1 rounded-full">Trekking</span>
+                        </div>
+                        <div class="mt-6 flex justify-between items-center">
+                            <div>
+                                <span class="text-sm text-[#2F4F4F]/70">From</span>
+                                <p class="text-xl font-bold">$2,895</p>
+                            </div>
+                            <a href="https://readdy.ai/home/60dd0683-f623-4dab-a33e-57338195e117/a3d50e07-bb0d-454d-ae82-1c7e44d0a819"
+                                data-readdy="true" title="View Spiritual Journey Details"
+                                aria-label="View details about Buddhist spiritual journeys and meditation retreats">
+                                <button
+                                    class="bg-primary text-white px-5 py-2 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all">View
+                                    Journey</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tour Card 2 -->
+                <div class="tour-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://readdy.ai/api/search-image?query=Japanese%20zen%20garden%20with%20temple%2C%20peaceful%20atmosphere%2C%20stone%20pathways%2C%20raked%20sand%20patterns%2C%20maple%20trees%20with%20autumn%20colors%2C%20traditional%20architecture%2C%20meditation%20space%2C%20tranquil%20pond%20with%20koi%20fish%2C%20subtle%20lighting%2C%20minimalist%20aesthetic&width=600&height=400&seq=123461&orientation=landscape"
+                            alt="Japanese Zen Retreat" class="w-full h-60 object-cover object-top">
+                        <div class="absolute top-4 right-4 bg-primary text-white text-sm px-3 py-1 rounded-full">10 Days
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold">Japanese Zen Retreat</h3>
+                            <div class="flex">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary">
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                                <span class="ml-1">4.8</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center mt-3 text-sm text-[#2F4F4F]/70">
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span class="ml-1">Kyoto & Mount Koya, Japan</span>
+                        </div>
+                        <p class="mt-4">Immerse yourself in Japanese Zen Buddhism with temple stays, meditation
+                            sessions, tea ceremonies, and mindful walks through ancient gardens and forests.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-[#F5F5DC] text-[#2F4F4F] text-xs px-3 py-1 rounded-full">Zen Practice</span>
+                            <span class="bg-[#F5F5DC] text-[#2F4F4F] text-xs px-3 py-1 rounded-full">Temple Stay</span>
+                            <span class="bg-[#F5F5DC] text-[#2F4F4F] text-xs px-3 py-1 rounded-full">Tea Ceremony</span>
+                        </div>
+                        <div class="mt-6 flex justify-between items-center">
+                            <div>
+                                <span class="text-sm text-[#2F4F4F]/70">From</span>
+                                <p class="text-xl font-bold">$3,250</p>
+                            </div>
+                            <a href="https://readdy.ai/home/60dd0683-f623-4dab-a33e-57338195e117/a3d50e07-bb0d-454d-ae82-1c7e44d0a819"
+                                data-readdy="true" title="View Spiritual Journey Details"
+                                aria-label="View details about Buddhist spiritual journeys and meditation retreats">
+                                <button
+                                    class="bg-primary text-white px-5 py-2 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all">View
+                                    Journey</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tour Card 3 -->
+                <div class="tour-card bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://readdy.ai/api/search-image?query=Thai%20Buddhist%20temple%20with%20golden%20stupas%2C%20monks%20in%20orange%20robes%2C%20lotus%20flowers%20in%20pond%2C%20peaceful%20atmosphere%2C%20traditional%20Thai%20architecture%2C%20spiritual%20environment%2C%20ornate%20decorations%2C%20natural%20lighting%2C%20cultural%20immersion%2C%20serene%20landscape&width=600&height=400&seq=123462&orientation=landscape"
+                            alt="Southeast Asian Temple Tour" class="w-full h-60 object-cover object-top">
+                        <div class="absolute top-4 right-4 bg-primary text-white text-sm px-3 py-1 rounded-full">12 Days
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold">Southeast Asian Temple Tour</h3>
+                            <div class="flex">
+                                <div class="w-5 h-5 flex items-center justify-center text-primary">
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                                <span class="ml-1">4.7</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center mt-3 text-sm text-[#2F4F4F]/70">
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span class="ml-1">Thailand & Myanmar</span>
+                        </div>
+                        <p class="mt-4">Discover the rich Buddhist traditions of Southeast Asia with visits to ancient
+                            temples, alms-giving ceremonies, meditation retreats, and cultural exchanges with local
+                            communities.</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-[#F5F5DC] text-[#2F4F4F] text-xs px-3 py-1 rounded-full">Temples</span>
+                            <span class="bg-[#F5F5DC] text-[#2F4F4F] text-xs px-3 py-1 rounded-full">Alms Giving</span>
+                            <span class="bg-[#F5F5DC] text-[#2F4F4F] text-xs px-3 py-1 rounded-full">Cultural</span>
+                        </div>
+                        <div class="mt-6 flex justify-between items-center">
+                            <div>
+                                <span class="text-sm text-[#2F4F4F]/70">From</span>
+                                <p class="text-xl font-bold">$2,450</p>
+                            </div>
+                            <a href="https://readdy.ai/home/60dd0683-f623-4dab-a33e-57338195e117/a3d50e07-bb0d-454d-ae82-1c7e44d0a819"
+                                data-readdy="true" title="View Spiritual Journey Details"
+                                aria-label="View details about Buddhist spiritual journeys and meditation retreats">
+                                <button
+                                    class="bg-primary text-white px-5 py-2 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all">View
+                                    Journey</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <button
+                    class="border-2 border-secondary text-secondary px-8 py-3 !rounded-button whitespace-nowrap hover:bg-secondary hover:text-white transition-all">View
+                    All Tour Packages</button>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-[#F5F5F0]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Transformative Experiences</h2>
+                <p class="text-lg max-w-2xl mx-auto text-[#2F4F4F]/80">Hear from travelers whose lives were changed by
+                    our mindful Buddhist journeys.</p>
+            </div>
+            <div class="relative">
+                <div class="testimonial-slider flex overflow-x-auto pb-8 -mx-4 px-4 scrollbar-hide"
+                    id="testimonial-slider">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-slide min-w-[350px] md:min-w-[500px] px-4">
+                        <div class="bg-white rounded-lg shadow-lg p-8">
+                            <div class="flex items-center mb-6">
+                                <img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20middle-aged%20woman%20with%20short%20brown%20hair%2C%20warm%20smile%2C%20natural%20lighting%2C%20neutral%20background%2C%20business%20casual%20attire%2C%20friendly%20expression%2C%20high%20quality%20portrait&width=100&height=100&seq=123463&orientation=squarish"
+                                    alt="Sarah Johnson" class="w-16 h-16 rounded-full object-cover object-top">
+                                <div class="ml-4">
+                                    <h4 class="font-bold">Sarah Johnson</h4>
+                                    <p class="text-sm text-[#2F4F4F]/70">New York, USA</p>
+                                    <div class="flex mt-1">
+                                        <div class="w-4 h-4 flex items-center justify-center text-primary">
+                                            <i class="ri-star-fill"></i>
+                                        </div>
+                                        <div class="w-4 h-4 flex items-center justify-center text-primary">
+                                            <i class="ri-star-fill"></i>
+                                        </div>
+                                        <div class="w-4 h-4 flex items-center justify-center text-primary">
+                                            <i class="ri-star-fill"></i>
+                                        </div>
+                                        <div class="w-4 h-4 flex items-center justify-center text-primary">
+                                            <i class="ri-star-fill"></i>
+                                        </div>
+                                        <div class="w-4 h-4 flex items-center justify-center text-primary">
+                                            <i class="ri-star-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-[#2F4F4F]/80 italic">"The Himalayan Spiritual Journey was truly
+                                life-changing. Meditating in ancient monasteries and connecting with Buddhist monks gave
+                                me a new perspective on life. The guides were knowledgeable and compassionate, making
+                                the experience even more meaningful. I returned home with a sense of peace I've never
+                                known before."</p>
+                            <p class="mt-4 text-sm text-[#2F4F4F]/70">Himalayan Spiritual Journey, April 2025</p>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-slide min-w-[350px] md:min-w-[500px] px-4">
+                        <div class="bg-white rounded-lg shadow-lg p-8">
+                            <div class="flex items-center mb-6">
+                                <img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20Asian%20man%20in%20his%2030s%2C%20glasses%2C%20short%20black%20hair%2C%20friendly%20smile%2C%20business%20casual%20attire%2C%20neutral%20background%2C%20natural%20lighting%2C%20high%20quality%20portrait&width=100&height=100&seq=123464&orientation=squarish"
+                                    alt="David Chen" class="w-16 h-16 rounded-full object-cover object-top">
+                                <div class="ml-4">
+                                    <h4 class="font-bold">David Chen</h4>
+                                    <p class="text-sm text-[#2F4F4F]/70">Toronto, Canada</p>
+                                    <div class="flex mt-1">
+                                        <div class="w-4 h-4 flex items-center justify-center text-primary">
+                                            <i class="ri-star-fill"></i>
+                                        </div>
+                                        <div class="w-4 h-4 flex items-center justify-center text-primary">
+                                            <i class="ri-star-fill"></i>
+                                        </div>
+                                        <div class="w-4 h-4 flex items-center justify-center text-primary">
+                                            <i class="ri-star-fill"></i>
+                                        </div>
+                                        <div class="w-4 h-4 flex items-center justify-center text-primary">
+                                            <i class="ri-star-fill"></i>
+                                        </div>
+                                        <div class="w-4 h-4 flex items-center justify-center text-primary">
+                                            <i class="ri-star-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-[#2F4F4F]/80 italic">"The Japanese Zen Retreat exceeded all my expectations.
+                                The temple stay at Mount Koya was profound - waking up for dawn meditation,
+                                participating in traditional ceremonies, and learning about Zen philosophy from actual
+                                practitioners. The attention to detail in the itinerary allowed for both structured
+                                learning and personal reflection."</p>
+                            <p class="mt-4 text-sm text-[#2F4F4F]/70">Japanese Zen Retreat, March 2025</p>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-slide min-w-[350px] md:min-w-[500px] px-4">
+                        <div class="bg-white rounded-lg shadow-lg p-8">
+                            <div class="flex items-center mb-6">
+                                <img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20middle-aged%20Indian%20woman%20with%20long%20black%20hair%2C%20warm%20smile%2C%20colorful%20traditional%20clothing%2C%20neutral%20background%2C%20natural%20lighting%2C%20friendly%20expression%2C%20high%20quality%20portrait&width=100&height=100&seq=123465&orientation=squarish"
+                                    alt="Priya Sharma" class="w-16 h-16 rounded-full object-cover object-top">
+                                <div class="ml-4">
+                                    <h4 class="font-bold">Priya Sharma</h4>
+                                    <p class="text-sm text-[#2F4F4F]/70">London, UK</p>
+                                    <div class="flex mt-1">
+                                        <div class="w-4 h-4 flex items-center justify-center text-primary">
+                                            <i class="ri-star-fill"></i>
+                                        </div>
+                                        <div class="w-4 h-4 flex items-center justify-center text-primary">
+                                            <i class="ri-star-fill"></i>
+                                        </div>
+                                        <div class="w-4 h-4 flex items-center justify-center text-primary">
+                                            <i class="ri-star-fill"></i>
+                                        </div>
+                                        <div class="w-4 h-4 flex items-center justify-center text-primary">
+                                            <i class="ri-star-fill"></i>
+                                        </div>
+                                        <div class="w-4 h-4 flex items-center justify-center text-[#2F4F4F]/30">
+                                            <i class="ri-star-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-[#2F4F4F]/80 italic">"The Southeast Asian Temple Tour was a beautiful blend
+                                of spiritual practice and cultural immersion. Participating in the alms-giving ceremony
+                                in Luang Prabang was humbling, and the guided meditations at ancient temples were deeply
+                                moving. The guides were exceptional at bridging cultural gaps and making Buddhist
+                                concepts accessible."</p>
+                            <p class="mt-4 text-sm text-[#2F4F4F]/70">Southeast Asian Temple Tour, February 2025</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Navigation Arrows -->
+                <button
+                    class="absolute top-1/2 left-0 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center focus:outline-none"
+                    id="prev-testimonial">
+                    <div class="w-5 h-5 flex items-center justify-center text-[#2F4F4F]">
+                        <i class="ri-arrow-left-s-line"></i>
+                    </div>
+                </button>
+                <button
+                    class="absolute top-1/2 right-0 transform -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center focus:outline-none"
+                    id="next-testimonial">
+                    <div class="w-5 h-5 flex items-center justify-center text-[#2F4F4F]">
+                        <i class="ri-arrow-right-s-line"></i>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Meditation & Wellness Section -->
+    <section id="retreats" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="w-full lg:w-1/2">
+                    <img src="https://readdy.ai/api/search-image?query=Peaceful%20meditation%20hall%20with%20Buddhist%20elements%2C%20warm%20natural%20lighting%2C%20meditation%20cushions%20arranged%20in%20circle%2C%20Buddha%20statue%2C%20incense%2C%20minimalist%20aesthetic%2C%20wooden%20floors%2C%20large%20windows%20with%20nature%20view%2C%20serene%20atmosphere%2C%20tranquil%20environment&width=800&height=600&seq=123466&orientation=landscape"
+                        alt="Meditation Retreat" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-4xl font-bold mb-6">Deepen Your Practice</h2>
+                    <p class="text-lg mb-6">Our specialized meditation retreats offer immersive experiences guided by
+                        experienced Buddhist practitioners. Whether you're a beginner or advanced meditator, our
+                        programs provide the perfect environment to deepen your practice and connect with your inner
+                        self.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="flex">
+                            <div
+                                class="w-12 h-12 flex items-center justify-center bg-[#F5F5DC] rounded-full text-primary">
+                                <i class="ri-mental-health-line text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-lg">Vipassana Meditation</h4>
+                                <p class="text-[#2F4F4F]/80">Insight meditation focusing on mindful awareness of breath
+                                    and body.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div
+                                class="w-12 h-12 flex items-center justify-center bg-[#F5F5DC] rounded-full text-primary">
+                                <i class="ri-heart-line text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-lg">Loving-Kindness</h4>
+                                <p class="text-[#2F4F4F]/80">Cultivate compassion and loving-kindness towards yourself
+                                    and others.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div
+                                class="w-12 h-12 flex items-center justify-center bg-[#F5F5DC] rounded-full text-primary">
+                                <i class="ri-lotus-line text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-lg">Zen Meditation</h4>
+                                <p class="text-[#2F4F4F]/80">Focused awareness practice in the Japanese Zen tradition.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div
+                                class="w-12 h-12 flex items-center justify-center bg-[#F5F5DC] rounded-full text-primary">
+                                <i class="ri-moon-line text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-lg">Tibetan Practices</h4>
+                                <p class="text-[#2F4F4F]/80">Traditional Tibetan Buddhist meditation techniques.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-[#F5F5DC] p-6 rounded-lg">
+                        <h4 class="font-bold text-lg mb-3">Upcoming Retreat: Silent Meditation in Bhutan</h4>
+                        <div class="flex items-center mb-2">
+                            <div class="w-5 h-5 flex items-center justify-center text-secondary">
+                                <i class="ri-calendar-line"></i>
+                            </div>
+                            <span class="ml-2">May 15-22, 2025</span>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <div class="w-5 h-5 flex items-center justify-center text-secondary">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span class="ml-2">Paro Valley Monastery, Bhutan</span>
+                        </div>
+                        <a href="https://readdy.ai/home/60dd0683-f623-4dab-a33e-57338195e117/d3b080ee-9be2-470d-9d8e-904ff4c854bf"
+                            data-readdy="true" class="block" title="View Bhutan Silent Retreat Details"
+                            aria-label="View details about 7-day silent meditation retreat in Bhutan">
+                            <button
+                                class="bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all w-full">View
+                                Retreat</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Newsletter Section -->
+    <section class="py-20 bg-[#8B7355] text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-6">Begin Your Spiritual Journey</h2>
+                <p class="text-lg mb-8 opacity-90">Subscribe to receive mindful travel inspiration, meditation guidance,
+                    and exclusive offers on our Buddhist tours and retreats.</p>
+                <form class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+                    <input type="email" placeholder="Your email address"
+                        class="flex-1 px-6 py-4 rounded-lg border-none focus:outline-none focus:ring-2 focus:ring-primary text-[#2F4F4F]">
+                    <button type="submit"
+                        class="bg-primary text-white px-8 py-4 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all">Subscribe</button>
+                </form>
+                <p class="mt-4 text-sm opacity-75">By subscribing, you agree to receive our newsletter and accept our
+                    Privacy Policy.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-[#2F4F4F] text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <a href="#" class="font-['Pacifico'] text-3xl text-primary">SoulPath</a>
+                    <p class="mt-4 text-white/70">Guiding spiritual journeys through ancient Buddhist sites and
+                        traditions since 2015. Our mindful approach to travel connects you with authentic experiences
+                        and inner peace.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-twitter-x-line"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-youtube-line"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-white/70 hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="#sacred-sites" class="text-white/70 hover:text-primary transition-colors">Sacred
+                                Sites</a></li>
+                        <li><a href="#tours" class="text-white/70 hover:text-primary transition-colors">Tour
+                                Packages</a></li>
+                        <li><a href="#retreats" class="text-white/70 hover:text-primary transition-colors">Meditation
+                                Retreats</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-primary transition-colors">Blog</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Popular Destinations</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-white/70 hover:text-primary transition-colors">Bodh Gaya, India</a>
+                        </li>
+                        <li><a href="#" class="text-white/70 hover:text-primary transition-colors">Kyoto, Japan</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-primary transition-colors">Lhasa, Tibet</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-primary transition-colors">Luang Prabang,
+                                Laos</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-primary transition-colors">Bagan, Myanmar</a>
+                        </li>
+                        <li><a href="#" class="text-white/70 hover:text-primary transition-colors">Bhutan</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-primary transition-colors">Sri Lanka</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contact Us</h4>
+                    <ul class="space-y-4">
+                        <li class="flex">
+                            <div class="w-5 h-5 flex items-center justify-center mt-1">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span class="ml-3 text-white/70">123 Mindful Way, Serenity Valley, CA 94123, USA</span>
+                        </li>
+                        <li class="flex">
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            <span class="ml-3 text-white/70">+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex">
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <span class="ml-3 text-white/70">info@soulpath.com</span>
+                        </li>
+                    </ul>
+                    <div class="mt-8">
+                        <h4 class="text-lg font-bold mb-4">We Accept</h4>
+                        <div class="flex space-x-3">
+                            <div class="w-10 h-6 flex items-center justify-center">
+                                <i class="ri-visa-fill text-xl"></i>
+                            </div>
+                            <div class="w-10 h-6 flex items-center justify-center">
+                                <i class="ri-mastercard-fill text-xl"></i>
+                            </div>
+                            <div class="w-10 h-6 flex items-center justify-center">
+                                <i class="ri-paypal-fill text-xl"></i>
+                            </div>
+                            <div class="w-10 h-6 flex items-center justify-center">
+                                <i class="ri-apple-fill text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-white/70 text-sm">© 2025 SoulPath Buddhist Tours. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-white/70 text-sm hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-white/70 text-sm hover:text-primary transition-colors">Terms of Service</a>
+                    <a href="#" class="text-white/70 text-sm hover:text-primary transition-colors">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Header scroll effect
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 50) {
+                    header.classList.remove('bg-transparent');
+                    header.classList.add('bg-[#2F4F4F]', 'shadow-lg');
+                } else {
+                    header.classList.add('bg-transparent');
+                    header.classList.remove('bg-[#2F4F4F]', 'shadow-lg');
+                }
+            });
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const closeMenuButton = document.getElementById('close-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', function () {
+                mobileMenu.classList.remove('translate-x-full');
+                mobileMenu.classList.add('translate-x-0');
+            });
+            closeMenuButton.addEventListener('click', function () {
+                mobileMenu.classList.remove('translate-x-0');
+                mobileMenu.classList.add('translate-x-full');
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            // Testimonial slider
+            const slider = document.getElementById('testimonial-slider');
+            const prevButton = document.getElementById('prev-testimonial');
+            const nextButton = document.getElementById('next-testimonial');
+            const slides = document.querySelectorAll('.testimonial-slide');
+            let currentIndex = 0;
+            const slideWidth = slides[0].offsetWidth + 32; // Width + gap
+            prevButton.addEventListener('click', function () {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    slider.scrollTo({
+                        left: currentIndex * slideWidth,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+            nextButton.addEventListener('click', function () {
+                if (currentIndex < slides.length - 1) {
+                    currentIndex++;
+                    slider.scrollTo({
+                        left: currentIndex * slideWidth,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            // Map marker interaction
+            const markers = [
+                document.getElementById('marker-1'),
+                document.getElementById('marker-2'),
+                document.getElementById('marker-3')
+            ];
+            markers.forEach(marker => {
+                marker.addEventListener('click', function () {
+                    // Reset all markers
+                    markers.forEach(m => {
+                        m.firstElementChild.classList.remove('scale-125');
+                    });
+                    // Highlight clicked marker
+                    marker.firstElementChild.classList.add('scale-125');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

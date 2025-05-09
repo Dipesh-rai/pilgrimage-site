@@ -1,0 +1,89 @@
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: transparent;
+    font-family: var(--primary-font);
+    padding: 10px 0;
+
+    h1 {
+        font-family: var(--join-fonts);
+        font-size: var(--font-xxl) !important;
+        color: var(--primary-color);
+    }
+
+    nav {
+        ul {
+            color: white;
+
+            li {
+                font-size: var(--font-md);
+                position: relative;
+
+                i {
+                    font-size: var(--font-sm);
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    transition: 0.5s;
+                    background-color: var(--primary-color);
+                }
+
+                .dropdown {
+                    position:absolute;
+                   top:120%;
+                    left:0;
+                    background-color:white;
+                    color:black;
+                    padding:10px;
+                    border-radius:20px;
+                    display:none;
+                    .option{
+                        padding:10px;
+                        border-radius: 20px;
+                        &:hover{
+                            background-color:#F5F5DC;
+                        }
+                    
+                        
+                        .dropdown-heading{
+                            white-space: nowrap;
+                            font-size:var(--font-md);
+                            font-weight:600;
+                        }
+                        .dropdown-item{
+                            white-space:nowrap;
+                            font-size:var(--font-sm);
+                            color:rgb(80, 77, 77);
+                        }
+                    }
+                    
+                    
+                }
+
+                &:hover {
+                    color: var(--primary-color);
+
+                    .dropdown{
+                        display:block;
+                    }
+                    &::before {
+                        width: 100%;
+                    }
+
+                }
+            }
+        }
+    }
+
+}
+
+.background {
+    background-color: var(--secondary-color);
+}
