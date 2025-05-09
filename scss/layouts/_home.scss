@@ -158,10 +158,10 @@
     }
 
     .menu-destination{
-        button{
+        .destination-sidenav{
             padding:10px;
             border:1px solid red;
-            width:90%;
+            width:100%;
             @include flex-items-center;
             gap:10px;
             .destination-name{

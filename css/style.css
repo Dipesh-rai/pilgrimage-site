@@ -464,20 +464,20 @@ footer .fotter-bottom a:hover {
   font-size: var(--font-xxl);
   font-weight: 600;
 }
-.discover .menu-destination button {
+.discover .menu-destination .destination-sidenav {
   padding: 10px;
   border: 1px solid red;
-  width: 90%;
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.discover .menu-destination button .destination-name {
+.discover .menu-destination .destination-sidenav .destination-name {
   text-align: start;
   font-family: var(--secondary-font);
   font-weight: 600;
 }
-.discover .menu-destination button .destination-title {
+.discover .menu-destination .destination-sidenav .destination-title {
   text-align: start;
   font-size: var(--font-md);
 }
