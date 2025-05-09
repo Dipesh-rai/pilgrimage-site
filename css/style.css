@@ -471,6 +471,11 @@ footer .fotter-bottom a:hover {
 .discover .row {
   background-color: white;
   border-radius: 20px;
+  overflow: hidden;
+  margin-inline: 0 !important;
+}
+.discover .row .col-lg-9 img {
+  height: 450px;
 }
 .discover .col-lg-3 {
   padding: 20px;
