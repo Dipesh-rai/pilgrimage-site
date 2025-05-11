@@ -30,8 +30,9 @@ body {
       margin: 0;
     padding: 0;
     // landscapes phones\
-    @media (max-width:576) {
-        padding: 0 10px;
+    @media (max-width:576px) {
+        padding: 0 20px !important;
+       
     }
 
 }

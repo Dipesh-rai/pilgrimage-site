@@ -1,5 +1,4 @@
 footer {
-    width: 100%;
     padding: 0;
     background-color: var(--secondary-color);
     padding: 30px 0;
@@ -103,6 +102,9 @@ footer {
                 color: var(--primary-color) !important;
             }
         }
+
+        // landscapes phones\
+        @media (max-width:576) {}
     }
 
 }
