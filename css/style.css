@@ -57,14 +57,8 @@ body {
 }
 
 section {
-  width: 100% !important;
-  overflow: hidden;
-}
-@media (max-width: 576) {
-  section {
-    width: 100%;
-    overflow: hidden;
-  }
+  width: 100%;
+  overflow-x: hidden;
 }
 
 a {
@@ -305,13 +299,20 @@ header .menu {
 
 footer {
   width: 100%;
-  border: 1px solid red;
-  width: 100%;
   padding: 0;
   background-color: var(--secondary-color);
   padding: 30px 0;
   color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
+  padding: 2rem 0;
+}
+footer .row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+footer .col-lg-3 {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 footer .footer-content {
   padding-bottom: 30px;
@@ -383,37 +384,21 @@ footer .footer-content .contact-items {
 footer .fotter-bottom a:hover {
   color: var(--primary-color) !important;
 }
-@media (max-width: 768px) {
-  footer {
-    width: 100%;
-  }
-}
-@media (max-width: 576) {
-  footer {
-    width: 100%;
-    margin: 0 !important;
-  }
-}
-@media (max-width: 10) {
-  footer {
-    width: 100%;
-    margin: 0 !important;
-  }
-}
 
 .banner {
   width: 100%;
   height: 90vh;
+  padding: 0;
 }
 .banner img {
   position: relative;
   filter: brightness(90%);
+  width: 100%;
 }
 .banner .banner-items {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 100%;
   max-width: 550px;
 }
 .banner .banner-items .banner-heading {

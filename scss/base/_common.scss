@@ -36,14 +36,12 @@ body {
 
 }
 
+
+
+// Use this:
 section {
-    width: 100% !important;
-    overflow: hidden;
-    // landscapes phones
-    @media (max-width:576) {
-         width: 100%;
-         overflow:hidden;
-    }
+  width: 100%;
+  overflow-x: hidden; // Only hide horizontal overflow
 }
 
 
