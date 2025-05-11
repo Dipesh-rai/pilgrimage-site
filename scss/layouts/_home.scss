@@ -11,12 +11,19 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width: 550px;
+        width: 100%;
+        max-width:550px;
+
+        // laptop
+        @media (min-width:992px) {
+            
+        }
 
         .banner-heading {
             font-family: var(--secondary-font);
             font-size: 50px;
             font-weight: 600;
+
         }
     }
 
@@ -185,20 +192,23 @@
     .row {
         background-color: white;
         border-radius: 20px;
-        overflow: hidden;;
-        margin-inline:0 !important;
-        .col-lg-9{
-            img{
-                height:450px;
+        overflow: hidden;
+        ;
+        margin-inline: 0 !important;
+
+        .col-lg-9 {
+            img {
+                height: 450px;
             }
-        }   
+        }
     }
 
-   
 
-    .col-lg-3{
-        padding:20px;
+
+    .col-lg-3 {
+        padding: 20px;
     }
+
     .menu-destination {
         .destination-sidenav {
             padding: 10px;

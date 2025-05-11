@@ -36,49 +36,77 @@ header {
                 }
 
                 .dropdown {
-                    position:absolute;
-                   top:120%;
-                    left:0;
-                    background-color:white;
-                    color:black;
-                    padding:10px;
-                    border-radius:20px;
-                    display:none;
-                    .option{
-                        padding:10px;
+                    position: absolute;
+                    top: 120%;
+                    left: 0;
+                    background-color: white;
+                    color: black;
+                    padding: 10px;
+                    border-radius: 20px;
+                    display: none;
+
+                    .option {
+                        padding: 10px;
                         border-radius: 20px;
-                        &:hover{
-                            background-color:#F5F5DC;
+
+                        &:hover {
+                            background-color: #F5F5DC;
                         }
-                    
-                        
-                        .dropdown-heading{
+
+
+                        .dropdown-heading {
                             white-space: nowrap;
-                            font-size:var(--font-md);
-                            font-weight:600;
+                            font-size: var(--font-md);
+                            font-weight: 600;
                         }
-                        .dropdown-item{
-                            white-space:nowrap;
-                            font-size:var(--font-sm);
-                            color:rgb(80, 77, 77);
+
+                        .dropdown-item {
+                            white-space: nowrap;
+                            font-size: var(--font-sm);
+                            color: rgb(80, 77, 77);
                         }
                     }
-                    
-                    
+
+
                 }
 
                 &:hover {
                     color: var(--primary-color);
 
-                    .dropdown{
-                        display:block;
+                    .dropdown {
+                        display: block;
                     }
+
                     &::before {
                         width: 100%;
                     }
 
                 }
             }
+        }
+
+        // laptop
+        @media (max-width:992px) {
+            display: none;
+        }
+    }
+
+    .journey {
+
+        // laptop
+        @media (max-width:992px) {
+            display: none;
+        }
+
+    }
+
+    .menu {
+        color: white;
+        display: none;
+
+        // laptop
+        @media (max-width:992px) {
+            display: block;
         }
     }
 
