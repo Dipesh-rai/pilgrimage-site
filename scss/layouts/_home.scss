@@ -212,11 +212,19 @@
             width: 100%;
             @include flex-items-center;
             gap: 10px;
+            border-radius:20px;
+             &:hover{
+                    background-color:var(--nav-color);
+                } 
+            &.active{
+                    background-color:var(--nav-color);
+                }
 
             .destination-name {
                 text-align: start;
                 font-family: var(--secondary-font);
                 font-weight: 600;
+               
             }
 
             .destination-title {
