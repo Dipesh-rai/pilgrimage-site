@@ -7,6 +7,7 @@
         filter: brightness(90%);
     }
 
+  
     .banner-items {
         position: absolute;
         top: 50%;
@@ -101,8 +102,8 @@
 
 // sacred
 .sacred {
-    p {
-        width: 560px;
+    .p {
+        display:block;
         margin-inline: auto;
     }
 

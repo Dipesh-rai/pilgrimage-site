@@ -24,40 +24,46 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: var(--primary-font) !important;
   font-size: clamp(14px, 1.5vw, 16px);
   color: rgb(80, 76, 76);
 }
 
-@media (max-width: 992px) {
-  .container {
-    width: 100%;
-    padding: 0;
-  }
+.row {
+  margin: 0;
+  padding: 0;
 }
-@media (max-width: 992px) {
-  .container {
-    width: 100%;
-    padding: 0;
-  }
+
+.col {
+  margin: 0;
+  padding: 0;
 }
-@media (max-width: 768px) {
-  .container {
-    width: 100%;
-    padding: 0;
-  }
+
+.container {
+  margin: 0;
+  padding: 0;
 }
 @media (max-width: 576) {
   .container {
-    width: 100%;
-    padding: 0;
+    padding: 0 10px;
   }
 }
-@media (max-width < 576) {
-  .container {
+
+section {
+  width: 100% !important;
+  overflow: hidden;
+}
+@media (max-width: 576) {
+  section {
     width: 100%;
-    padding: 0;
+    overflow: hidden;
   }
 }
 
@@ -299,6 +305,9 @@ header .menu {
 
 footer {
   width: 100%;
+  border: 1px solid red;
+  width: 100%;
+  padding: 0;
   background-color: var(--secondary-color);
   padding: 30px 0;
   color: rgba(255, 255, 255, 0.7);
@@ -373,6 +382,23 @@ footer .footer-content .contact-items {
 }
 footer .fotter-bottom a:hover {
   color: var(--primary-color) !important;
+}
+@media (max-width: 768px) {
+  footer {
+    width: 100%;
+  }
+}
+@media (max-width: 576) {
+  footer {
+    width: 100%;
+    margin: 0 !important;
+  }
+}
+@media (max-width: 10) {
+  footer {
+    width: 100%;
+    margin: 0 !important;
+  }
 }
 
 .banner {
@@ -456,8 +482,8 @@ footer .fotter-bottom a:hover {
   margin-right: 5px;
 }
 
-.sacred p {
-  width: 560px;
+.sacred .p {
+  display: block;
   margin-inline: auto;
 }
 .sacred .sacred-site {
