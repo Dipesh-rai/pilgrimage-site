@@ -30,8 +30,35 @@ body {
   color: rgb(80, 76, 76);
 }
 
-.container {
-  padding: 0 !important;
+@media (max-width: 992px) {
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+}
+@media (max-width: 576) {
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+}
+@media (max-width < 576) {
+  .container {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 a {
@@ -63,6 +90,10 @@ h1 {
 .heading-items {
   font-size: var(--font-heading);
   font-weight: 700;
+}
+
+section {
+  width: 100%;
 }
 
 .icon {
