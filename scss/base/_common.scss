@@ -77,7 +77,25 @@ h1 {
 .heading-items {
     font-size: var(--font-heading);
     font-weight: 700;
+    font-family:var(--secondary-font);
+    color:var(--heading-color);
 }
+.second-heading{
+    font-size:var(--font-xl);
+    font-family:var(--secondary-font);
+    font-weight:600;
+    color:var(--heading-color);
+}
+// body-font-colo-deam
+.deam {
+    color: var(--deam-color);
+}
+.deam-thin{
+    color: var(--deam-color);
+    font-size:var(--font-md);
+    font-weight:400;
+}
+
 
 section {
     width: 100%;
@@ -94,6 +112,14 @@ section {
         color: var(--primary-color);
         font-size: var(--font-md);
     }
+}
+
+// box-shadow
+.shadow-lg{
+    box-shadow: var(--shadow-lgg);
+}
+.shadow-main{
+      box-shadow:var(--shadow-main);
 }
 
 // buttons
@@ -197,14 +223,14 @@ section {
     font-family: var(--secondary-font);
 }
 
-// body-font-colo-deam
-.deam {
-    color: var(--text-color);
+
+// bootstrap common
+.card{
+    overflow:hidden;
+    height:500px;
 }
 
-h2 {
-    font-weight: 900;
-}
+
 
 // large desktop
 @media (max-width:1400px) {}

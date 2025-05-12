@@ -1,22 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Pacifico&display=swap");
 :root {
-  --primary-color:#DAA520;
-  --secondary-color:#2F4F4F;
-  --banner-card:#807775;
-  --text-color:rgb(80, 77, 77);
-  --icon-color:#F2EDC8;
-  --button-color:#8B7355;
-  --nav-color:#F5F5DC;
-  --primary-font:"Nunito Sans", sans-serif;
+  --primary-color: #DAA520;
+  --secondary-color: #2F4F4F;
+  --banner-card: #807775;
+  --text-color: rgb(80, 77, 77);
+  --icon-color: #F2EDC8;
+  --button-color: #8B7355;
+  --nav-color: #F5F5DC;
+  --heading-color: rgb(47, 79, 79);
+  --deam-color: rgba(47, 79, 79, 0.7);
+  --primary-font: "Nunito Sans", sans-serif;
   --secondary-font: "Cormorant Garamond", serif;
-  --join-fonts:"Pacifico", cursive;
-  --font-sm: 0.75rem; /* 12px */
-  --font-md: 0.875rem; /* 14px */
-  --font-lg: 1rem; /*16px*/
-  --font-xl:1.25rem; /*20px*/
-  --font-xxl:1.5rem; /*24 px*/
-  --font-xxxl:1.875rem; /*30px*/
-  --font-heading:2.25rem;
+  --join-fonts: "Pacifico", cursive;
+  --font-sm: 0.75rem;
+  /* 12px */
+  --font-md: 0.875rem;
+  /* 14px */
+  --font-lg: 1rem;
+  /*16px*/
+  --font-xl: 1.25rem;
+  /*20px*/
+  --font-xxl: 1.5rem;
+  /*24 px*/
+  --font-xxxl: 1.875rem;
+  /*30px*/
+  --font-heading: 2.25rem;
+  --shadow-lgg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  --shadow-main:0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 * {
@@ -91,6 +102,25 @@ h1 {
 .heading-items {
   font-size: var(--font-heading);
   font-weight: 700;
+  font-family: var(--secondary-font);
+  color: var(--heading-color);
+}
+
+.second-heading {
+  font-size: var(--font-xl);
+  font-family: var(--secondary-font);
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+.deam {
+  color: var(--deam-color);
+}
+
+.deam-thin {
+  color: var(--deam-color);
+  font-size: var(--font-md);
+  font-weight: 400;
 }
 
 section {
@@ -109,6 +139,14 @@ section {
 .icon i {
   color: var(--primary-color);
   font-size: var(--font-md);
+}
+
+.shadow-lg {
+  box-shadow: var(--shadow-lgg);
+}
+
+.shadow-main {
+  box-shadow: var(--shadow-main);
 }
 
 .btn-1 {
@@ -202,12 +240,9 @@ section {
   font-family: var(--secondary-font);
 }
 
-.deam {
-  color: var(--text-color);
-}
-
-h2 {
-  font-weight: 900;
+.card {
+  overflow: hidden;
+  height: 500px;
 }
 
 header {
@@ -445,7 +480,6 @@ footer .fotter-bottom a:hover {
   font-size: var(--font-md);
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .choose .commit .commit-heading {
   font-size: var(--font-xxl);
@@ -562,4 +596,65 @@ footer .fotter-bottom a:hover {
 .discover .menu-destination .destination-sidenav .destination-title {
   text-align: start;
   font-size: var(--font-md);
+}
+
+.spritual .spritual-items .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spritual .spritual-items .nav button {
+  padding: 7px 20px;
+  border: none;
+  background-color: var(--nav-color);
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.spritual .spritual-items .nav button.active {
+  background-color: var(--primary-color);
+}
+.spritual .spritual-items .tours .card {
+  border: none;
+  transition: 0.2s;
+}
+.spritual .spritual-items .tours .card .img-part {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+.spritual .spritual-items .tours .card .img-part .btn-1 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 20px;
+}
+.spritual .spritual-items .tours .card .img-part img {
+  transition: 0.2s;
+}
+.spritual .spritual-items .tours .card i {
+  font-size: var(--font-sm);
+}
+.spritual .spritual-items .tours .card .rating i {
+  color: var(--primary-color) !important;
+}
+.spritual .spritual-items .tours .card .content {
+  font-size: var(--font-md);
+}
+.spritual .spritual-items .tours .card .practices {
+  padding: 7px 10px;
+  background-color: var(--nav-color);
+  font-size: var(--font-sm);
+  border-radius: 15px;
+}
+.spritual .spritual-items .tours .card .price {
+  font-weight: 500;
+  color: var(--heading-color);
+}
+.spritual .spritual-items .tours .card:hover {
+  box-shadow: var(--shadow-lg) !important;
+  transform: translateY(-10px);
+}
+.spritual .spritual-items .tours .card:hover img {
+  overflow: hidden;
+  transform: scale(1.2);
 }
