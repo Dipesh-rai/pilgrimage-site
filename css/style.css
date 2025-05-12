@@ -9,6 +9,7 @@
   --nav-color: #F5F5DC;
   --heading-color: rgb(47, 79, 79);
   --deam-color: rgba(47, 79, 79, 0.7);
+  --background-color: #F5F5F0;
   --primary-font: "Nunito Sans", sans-serif;
   --secondary-font: "Cormorant Garamond", serif;
   --join-fonts: "Pacifico", cursive;
@@ -113,6 +114,12 @@ h1 {
   color: var(--heading-color);
 }
 
+.normal-heading {
+  font-family: var(--secondary-font);
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
 .deam {
   color: var(--deam-color);
 }
@@ -120,6 +127,12 @@ h1 {
 .deam-thin {
   color: var(--deam-color);
   font-size: var(--font-md);
+  font-weight: 400;
+}
+
+.deam-thiner {
+  color: var(--deam-color);
+  font-size: var(--font-sm);
   font-weight: 400;
 }
 
@@ -556,7 +569,7 @@ footer .fotter-bottom a:hover {
 }
 
 .discover {
-  background-color: #F5F5F0;
+  background-color: var(--background-color);
   padding: 60px 0;
 }
 .discover .heading-title {
@@ -662,6 +675,23 @@ footer .fotter-bottom a:hover {
   overflow: hidden;
   transform: scale(1.2);
 }
-.spritual .spritual-items .tours .width-100 button {
-  margin-inline: auto;
+
+.testimonial {
+  background-color: var(--background-color);
+  padding: 60px 0;
+}
+.testimonial .testimonial-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-main);
+}
+.testimonial .testimonial-content img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+.testimonial .testimonial-content .rating {
+  color: var(--primary-color);
+  font-size: var(--font-md);
 }

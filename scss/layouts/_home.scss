@@ -176,7 +176,7 @@
 
 // discover
 .discover {
-    background-color: #F5F5F0;
+    background-color: var(--background-color);
     padding: 60px 0;
 
     .heading-title {
@@ -320,12 +320,28 @@
                 }
             }
 
-            .width-100 {
-                button {
-                    margin-inline: auto;
-                }
-            }
 
+        }
+    }
+}
+
+.testimonial{
+     background-color: var(--background-color);
+    padding: 60px 0;
+
+    .testimonial-content{
+        background-color:white;
+        padding:20px;
+        border-radius:20px;
+        box-shadow: var(--shadow-main);
+        img{
+            height:70px;
+            width:70px;
+            border-radius:50%;
+        }
+        .rating{
+            color:var(--primary-color);
+            font-size:var(--font-md);
         }
     }
 }

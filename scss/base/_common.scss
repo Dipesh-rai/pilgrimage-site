@@ -87,6 +87,12 @@ h1 {
     font-weight:600;
     color:var(--heading-color);
 }
+.normal-heading{
+    font-family:var(--secondary-font);
+    font-weight:600;
+    color:var(--heading-color);
+}
+
 // body-font-colo-deam
 .deam {
     color: var(--deam-color);
@@ -94,6 +100,11 @@ h1 {
 .deam-thin{
     color: var(--deam-color);
     font-size:var(--font-md);
+    font-weight:400;
+}
+.deam-thiner{
+    color: var(--deam-color);
+    font-size:var(--font-sm);
     font-weight:400;
 }
 
