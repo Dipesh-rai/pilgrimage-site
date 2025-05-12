@@ -123,6 +123,10 @@ h1 {
   font-weight: 400;
 }
 
+.width-100 {
+  width: 100%;
+}
+
 section {
   width: 100%;
 }
@@ -657,4 +661,7 @@ footer .fotter-bottom a:hover {
 .spritual .spritual-items .tours .card:hover img {
   overflow: hidden;
   transform: scale(1.2);
+}
+.spritual .spritual-items .tours .width-100 button {
+  margin-inline: auto;
 }

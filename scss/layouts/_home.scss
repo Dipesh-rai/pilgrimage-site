@@ -78,7 +78,7 @@
         font-size: var(--font-md);
         border-radius: 15px;
         overflow: hidden;
-      
+
 
         .commit-heading {
             font-size: var(--font-xxl);
@@ -240,7 +240,7 @@
 }
 
 
-.spritual{
+.spritual {
 
     .spritual-items {
         .nav {
@@ -268,14 +268,14 @@
                 .img-part {
                     height: 200px;
                     overflow: hidden;
-                    position:relative;
-                    
+                    position: relative;
 
-                    .btn-1{
-                        position:absolute;
-                        top:10px;
-                        right:10px;
-                        border-radius:20px;
+
+                    .btn-1 {
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        border-radius: 20px;
                     }
 
                     img {
@@ -319,6 +319,13 @@
                     }
                 }
             }
+
+            .width-100 {
+                button {
+                    margin-inline: auto;
+                }
+            }
+
         }
     }
 }

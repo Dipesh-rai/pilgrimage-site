@@ -9,6 +9,7 @@ html, body {
   padding: 0;
 }
 
+
 body {
     font-family: var(--primary-font) !important;
     font-size: clamp(14px, 1.5vw, 16px);
@@ -96,6 +97,10 @@ h1 {
     font-weight:400;
 }
 
+
+.width-100{
+    width:100%;
+}
 
 section {
     width: 100%;
