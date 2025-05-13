@@ -50,6 +50,10 @@ body {
   color: rgb(80, 76, 76);
 }
 
+.text-white {
+  color: white !important;
+}
+
 .row {
   margin: 0;
   padding: 0;
@@ -663,6 +667,7 @@ footer .fotter-bottom a:hover {
 }
 .spritual .spritual-items .nav button.active {
   background-color: var(--primary-color);
+  color: white;
 }
 .spritual .spritual-items .tours .card {
   border: none;
@@ -742,4 +747,24 @@ footer .fotter-bottom a:hover {
 }
 .practice .card i {
   color: var(--primary-color);
+}
+
+.subscription {
+  background-color: var(--button-color);
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+.subscription input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 250px;
+}
+.subscription input:focus-visible {
+  outline: none;
+}
+.subscription .btn-2 {
+  border-radius: 10px !important;
+}
+.subscription span {
+  font-size: var(--font-md);
 }

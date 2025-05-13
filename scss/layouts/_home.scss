@@ -255,6 +255,7 @@
 
                 &.active {
                     background-color: var(--primary-color);
+                    color: white;
                 }
             }
         }
@@ -325,40 +326,67 @@
     }
 }
 
-.testimonial{
-     background-color: var(--background-color);
+.testimonial {
+    background-color: var(--background-color);
     padding: 60px 0;
 
-    .testimonial-content{
-        background-color:white;
-        padding:20px;
-        border-radius:20px;
+    .testimonial-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 20px;
         box-shadow: var(--shadow-main);
-        img{
-            height:70px;
-            width:70px;
-            border-radius:50%;
+
+        img {
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
         }
-        .rating{
-            color:var(--primary-color);
-            font-size:var(--font-md);
+
+        .rating {
+            color: var(--primary-color);
+            font-size: var(--font-md);
         }
     }
 }
 
-.practice{
-    img{
-        border-radius:15px;
-    }
-    .practice-row{
-        height:110px;
+.practice {
+    img {
+        border-radius: 15px;
     }
 
-    .card{
-        background-color:var(--icon-color);
-        border:none;
-        i{
-            color:var(--primary-color);
+    .practice-row {
+        height: 110px;
+    }
+
+    .card {
+        background-color: var(--icon-color);
+        border: none;
+
+        i {
+            color: var(--primary-color);
         }
     }
+}
+
+.subscription {
+    background-color: var(--button-color);
+   color: rgba(255, 255, 255, 0.7) !important;
+ input{
+    padding:10px;
+        border-radius:10px;
+        border:none;
+          width:250px;
+        &:focus-visible{
+            outline:none;
+          
+        }
+
+    }
+   .btn-2{
+   
+    border-radius:10px !important;
+   }
+   span{
+    font-size:var(--font-md);
+   }
 }
