@@ -47,7 +47,7 @@ body {
 body {
   font-family: var(--primary-font) !important;
   font-size: clamp(14px, 1.5vw, 16px);
-  color: rgb(80, 76, 76);
+  color: rgb(54, 52, 52) !important;
 }
 
 .text-white {
@@ -116,10 +116,17 @@ h1 {
   color: var(--heading-color);
 }
 
+.secondary-type-heading {
+  font-size: var(--font-xxl);
+  font-weight: 700;
+  font-family: var(--secondary-font);
+  color: var(--heading-color);
+}
+
 .second-heading {
   font-size: var(--font-xl);
   font-family: var(--secondary-font);
-  font-weight: 600;
+  font-weight: 800;
   color: var(--heading-color);
 }
 
@@ -767,4 +774,28 @@ footer .fotter-bottom a:hover {
 }
 .subscription .small {
   font-size: var(--font-md);
+}
+
+.contact {
+  color: var(--text-color);
+}
+.contact .card {
+  border: none;
+  box-shadow: var(--shadow-main);
+}
+.contact .contact-details {
+  height: 220px;
+}
+.contact .message label {
+  color: var(--text-color);
+  padding: 10px 0;
+}
+.contact .message input {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid rgb(201, 197, 197);
+  border-radius: 10px;
+}
+.contact .message input:focus-visible {
+  outline: 1px solid var(--primary-color);
 }

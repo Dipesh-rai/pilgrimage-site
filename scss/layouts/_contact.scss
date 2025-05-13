@@ -1,0 +1,29 @@
+.contact {
+    color: var(--text-color);
+
+    .card {
+        border: none;
+        box-shadow: var(--shadow-main);
+    }
+
+    .contact-details {
+        height: 220px;
+    }
+
+    .message {
+        label {
+            color: var(--text-color);
+            padding:10px 0;
+        }
+
+        input {
+            width: 100%;
+            padding: 7px;
+            border: 1px solid rgb(201, 197, 197);
+            border-radius: 10px;
+            &:focus-visible{
+                outline: 1px solid var(--primary-color);
+            }
+        }
+    }
+}
