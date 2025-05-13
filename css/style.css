@@ -765,6 +765,6 @@ footer .fotter-bottom a:hover {
 .subscription .btn-2 {
   border-radius: 10px !important;
 }
-.subscription span {
+.subscription .small {
   font-size: var(--font-md);
 }
