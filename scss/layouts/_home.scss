@@ -345,3 +345,20 @@
         }
     }
 }
+
+.practice{
+    img{
+        border-radius:15px;
+    }
+    .practice-row{
+        height:110px;
+    }
+
+    .card{
+        background-color:var(--icon-color);
+        border:none;
+        i{
+            color:var(--primary-color);
+        }
+    }
+}

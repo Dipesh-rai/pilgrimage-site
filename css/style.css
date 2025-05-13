@@ -37,7 +37,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -85,6 +86,10 @@ a {
   margin-bottom: 0 !important;
 }
 
+p {
+  color: rgb(80, 76, 76);
+}
+
 ul {
   list-style: none;
   margin-bottom: 0 !important;
@@ -116,7 +121,7 @@ h1 {
 
 .normal-heading {
   font-family: var(--secondary-font);
-  font-weight: 600;
+  font-weight: 700;
   color: var(--heading-color);
 }
 
@@ -126,6 +131,12 @@ h1 {
 
 .deam-thin {
   color: var(--deam-color);
+  font-size: var(--font-md);
+  font-weight: 400;
+}
+
+.deam-black-thin {
+  color: var(--text-color);
   font-size: var(--font-md);
   font-weight: 400;
 }
@@ -145,8 +156,8 @@ section {
 }
 
 .icon {
-  width: 35px;
-  height: 35px;
+  width: 35px !important;
+  height: 35px !important;
   border-radius: 50%;
   background-color: var(--icon-color);
   display: flex;
@@ -260,6 +271,29 @@ section {
 .card {
   overflow: hidden;
   height: 500px;
+}
+
+.owl-outer-stage {
+  position: relative;
+}
+
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.owl-nav button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  box-shadow: var(--shadow-lg) !important;
+}
+.owl-nav button:hover {
+  background-color: rgb(245, 240, 240) !important;
 }
 
 header {
@@ -694,4 +728,18 @@ footer .fotter-bottom a:hover {
 .testimonial .testimonial-content .rating {
   color: var(--primary-color);
   font-size: var(--font-md);
+}
+
+.practice img {
+  border-radius: 15px;
+}
+.practice .practice-row {
+  height: 110px;
+}
+.practice .card {
+  background-color: var(--icon-color);
+  border: none;
+}
+.practice .card i {
+  color: var(--primary-color);
 }
