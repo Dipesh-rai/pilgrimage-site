@@ -302,8 +302,11 @@ section {
             }
         }
     }
-
-
+// js
+.right{
+    right:0;
+    transition:0.5s;
+}
 
 // large desktop
 @media (max-width:1400px) {}

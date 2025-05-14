@@ -308,6 +308,11 @@ section {
   background-color: rgb(245, 240, 240) !important;
 }
 
+.right {
+  right: 0;
+  transition: 0.5s;
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -315,23 +320,24 @@ header {
   background-color: transparent;
   font-family: var(--primary-font);
   padding: 10px 0;
+  position: relative;
 }
 header h1 {
   font-family: var(--join-fonts);
   font-size: var(--font-xxl) !important;
   color: var(--primary-color);
 }
-header nav ul {
+header .desktop-nav ul {
   color: white;
 }
-header nav ul li {
+header .desktop-nav ul li {
   font-size: var(--font-md);
   position: relative;
 }
-header nav ul li i {
+header .desktop-nav ul li i {
   font-size: var(--font-sm);
 }
-header nav ul li::before {
+header .desktop-nav ul li::before {
   content: "";
   position: absolute;
   top: 100%;
@@ -341,7 +347,7 @@ header nav ul li::before {
   transition: 0.5s;
   background-color: var(--primary-color);
 }
-header nav ul li .dropdown {
+header .desktop-nav ul li .dropdown {
   position: absolute;
   top: 120%;
   left: 0;
@@ -351,34 +357,34 @@ header nav ul li .dropdown {
   border-radius: 20px;
   display: none;
 }
-header nav ul li .dropdown .option {
+header .desktop-nav ul li .dropdown .option {
   padding: 10px;
   border-radius: 20px;
 }
-header nav ul li .dropdown .option:hover {
+header .desktop-nav ul li .dropdown .option:hover {
   background-color: var(--nav-color);
 }
-header nav ul li .dropdown .option .dropdown-heading {
+header .desktop-nav ul li .dropdown .option .dropdown-heading {
   white-space: nowrap;
   font-size: var(--font-md);
   font-weight: 600;
 }
-header nav ul li .dropdown .option .dropdown-item {
+header .desktop-nav ul li .dropdown .option .dropdown-item {
   white-space: nowrap;
   font-size: var(--font-sm);
   color: rgb(80, 77, 77);
 }
-header nav ul li:hover {
+header .desktop-nav ul li:hover {
   color: var(--primary-color);
 }
-header nav ul li:hover .dropdown {
+header .desktop-nav ul li:hover .dropdown {
   display: block;
 }
-header nav ul li:hover::before {
+header .desktop-nav ul li:hover::before {
   width: 100%;
 }
 @media (max-width: 992px) {
-  header nav {
+  header .desktop-nav {
     display: none;
   }
 }
@@ -388,13 +394,37 @@ header nav ul li:hover::before {
   }
 }
 header .menu {
-  color: white;
   display: none;
+}
+header .menu button {
+  color: white;
 }
 @media (max-width: 992px) {
   header .menu {
     display: block;
   }
+}
+header .trigger_nav {
+  position: absolute;
+  right: 100%;
+  top: 0;
+  background-color: white;
+  transition: 0.5s;
+}
+@media (max-width: 992px) {
+  header .trigger_nav {
+    display: block;
+    width: 70%;
+  }
+}
+@media (max-width: 992px) {
+  header .trigger_nav {
+    display: block;
+    width: 50%;
+  }
+}
+header .trigger_nav nav ul {
+  flex-direction: column;
 }
 
 .background {
