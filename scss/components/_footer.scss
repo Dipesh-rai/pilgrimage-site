@@ -18,7 +18,8 @@ footer {
             color: var(--primary-color);
         }
 
-        .media {
+    // media
+     .media-items {
             padding: 0;
             height: 35px;
             width: 35px;
@@ -29,8 +30,10 @@ footer {
 
             &:hover {
                 background-color: var(--primary-color);
+                color:white;
             }
         }
+
 
         .content-footer {
             // line-height: 2;
