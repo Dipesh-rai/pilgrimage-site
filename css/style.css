@@ -348,7 +348,7 @@ header .desktop-nav ul li::before {
   left: 0;
   width: 0;
   height: 2px;
-  transition: 0.5s;
+  transition: 0.2s;
   background-color: var(--primary-color);
 }
 header .desktop-nav ul li .dropdown {
@@ -367,6 +367,10 @@ header .desktop-nav ul li .dropdown .option {
 }
 header .desktop-nav ul li .dropdown .option:hover {
   background-color: var(--nav-color);
+  color: var(--primary-color);
+}
+header .desktop-nav ul li .dropdown .option:hover .dropdown-item {
+  color: var(--button-color);
 }
 header .desktop-nav ul li .dropdown .option .dropdown-heading {
   white-space: nowrap;
@@ -376,7 +380,7 @@ header .desktop-nav ul li .dropdown .option .dropdown-heading {
 header .desktop-nav ul li .dropdown .option .dropdown-item {
   white-space: nowrap;
   font-size: var(--font-sm);
-  color: rgb(80, 77, 77);
+  color: var(--text-color);
 }
 header .desktop-nav ul li:hover {
   color: var(--primary-color);
@@ -490,7 +494,7 @@ footer .footer-content ul li a::before {
   height: 2px;
   top: 90%;
   left: 0;
-  transition: 0.5s;
+  transition: 0.2s;
   background-color: var(--primary-color);
 }
 footer .footer-content ul li a:hover::before {

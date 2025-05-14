@@ -31,7 +31,7 @@ header {
                     left: 0;
                     width: 0;
                     height: 2px;
-                    transition: 0.5s;
+                    transition: 0.2s;
                     background-color: var(--primary-color);
                 }
 
@@ -51,6 +51,10 @@ header {
 
                         &:hover {
                             background-color: var(--nav-color);
+                            color:var(--primary-color);
+                            .dropdown-item{
+                                color:var(--button-color);
+                            }
                         }
 
 
@@ -63,7 +67,7 @@ header {
                         .dropdown-item {
                             white-space: nowrap;
                             font-size: var(--font-sm);
-                            color: rgb(80, 77, 77);
+                            color: var(--text-color);
                         }
                     }
 
