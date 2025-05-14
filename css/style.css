@@ -413,9 +413,11 @@ header .offcanvas {
 header .offcanvas button {
   filter: invert(1) grayscale(100%) brightness(200%) !important;
 }
+header .offcanvas .offcanvas-body nav ul {
+  padding: 0;
+}
 header .offcanvas .offcanvas-body nav li {
   color: white;
-  border: 1px solid white;
   padding: 10px;
 }
 header .offcanvas .offcanvas-body nav li .dropdown a {
