@@ -308,6 +308,10 @@ section {
     transition:0.5s;
 }
 
+.white-close {
+  filter: invert(1) grayscale(100%) brightness(200%) !important;
+}
+
 // large desktop
 @media (max-width:1400px) {}
 

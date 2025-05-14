@@ -313,6 +313,10 @@ section {
   transition: 0.5s;
 }
 
+.white-close {
+  filter: invert(1) grayscale(100%) brightness(200%) !important;
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -403,6 +407,26 @@ header .menu button {
     display: block;
   }
 }
+header .offcanvas {
+  background-color: var(--secondary-color);
+}
+header .offcanvas button {
+  filter: invert(1) grayscale(100%) brightness(200%) !important;
+}
+header .offcanvas .offcanvas-body nav li {
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+}
+header .offcanvas .offcanvas-body nav li .dropdown a {
+  padding: 5px;
+  margin-block: 5px;
+  display: block;
+  background-color: var(--nav-color);
+  color: var(--primary-color) !important;
+  border-radius: 5px;
+}
+
 .background {
   background-color: var(--secondary-color);
 }

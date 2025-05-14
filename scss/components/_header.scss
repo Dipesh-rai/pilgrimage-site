@@ -50,7 +50,7 @@ header {
                         border-radius: 20px;
 
                         &:hover {
-                            background-color:var(--nav-color);
+                            background-color: var(--nav-color);
                         }
 
 
@@ -102,22 +102,45 @@ header {
 
     .menu {
         display: none;
-        button{
-            color:white;
+
+        button {
+            color: white;
         }
+
         // laptop
         @media (max-width:992px) {
             display: block;
         }
     }
 
-    .offcanvas-body{
-       
+    .offcanvas {
+        background-color: var(--secondary-color);
+        button{
+              filter: invert(1) grayscale(100%) brightness(200%) !important;
+        }
+        .offcanvas-body {
+            nav {
+                li {
+                    color: white;
+                    border:1px solid white;
+                    padding:10px;
+                    .dropdown{
+                        a{
+                            padding:5px;
+                            margin-block:5px;
+                            display:block;
+                            background-color:var(--nav-color);
+                            color:var(--primary-color) !important;
+                            border-radius:5px;
+                        }
+                    }
+                }
+            }
+        }
     }
-    
-
-
 }
+
+
 
 .background {
     background-color: var(--secondary-color);
