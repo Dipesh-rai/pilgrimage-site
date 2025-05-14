@@ -11,11 +11,4 @@ window.addEventListener('scroll', function () {
 }
 })
 
-// menu
-const menu =document.querySelector("#nav_trigger");
-const right=document.querySelector(".right");
-
-menu.addEventListener(click,funtion(){
-    
-});
 

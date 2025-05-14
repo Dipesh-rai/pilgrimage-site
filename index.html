@@ -23,7 +23,7 @@
         <div class="container">
             <div class="top d-flex flex-wrap justify-content-between align-items-center">
                 <h1 class="font-['Pacifico']">Pilgrimage Tour</h1>
-                <nav>
+                <nav class="desktop-nav">
                     <ul class="d-flex gap-5">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="">Secrate Sites <i class="fa-solid fa-chevron-down"></i></a>
@@ -119,8 +119,119 @@
                     <button class="btn-1">View Journey</button>
                 </div>
 
-                <div class="menu">
-                    <i class="fa-solid fa-bars"></i>
+                  <div class="menu">
+                    <button class="btn" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-bars"></i></button>
+
+                </div>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                  <div class="trigger_nav">
+                    <nav>
+                        <ul class="d-flex flex-column gap-5">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="">Secrate Sites <i class="fa-solid fa-chevron-down"></i></a>
+                                <div class="dropdown">
+                                    <div class="d-flex flex-column">
+                                        <div class="option">
+                                            <a href="">
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="icon  d-flex align-items-center justify-content-center">
+                                                        <i class="ri-ancient-pavilion-line"></i>
+                                                    </div>
+                                                    <div class="dropdown-items ">
+                                                        <div class="dropdown-heading main">Lumbini</div>
+                                                        <div class="dropdown-item">Birthplace of Buddha</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="option">
+                                            <a href="">
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="icon  d-flex align-items-center justify-content-center">
+                                                        <i class="ri-ancient-gate-line"></i>
+                                                    </div>
+                                                    <div class="dropdown-items ">
+                                                        <div class="dropdown-heading main">Boudhanath</div>
+                                                        <div class="dropdown-item">Sacred Stupa</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="option">
+                                            <a href="">
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="icon  d-flex align-items-center justify-content-center">
+                                                        <i class="ri-building-line"></i>
+                                                    </div>
+                                                    <div class="dropdown-items ">
+                                                        <div class="dropdown-heading main">Swayambhunath</div>
+                                                        <div class="dropdown-item">Monkey Temple</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="">Tours <i class="fa-solid fa-chevron-down"></i></a>
+                                <div class="dropdown">
+                                    <div class="d-flex flex-column">
+                                        <div class="option">
+                                            <a href="">
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="icon  d-flex align-items-center justify-content-center">
+                                                        <i class="ri-road-map-line"></i>
+                                                    </div>
+                                                    <div class="dropdown-items ">
+                                                        <div class="dropdown-heading main">Himalayan Journey</div>
+                                                        <div class="dropdown-item">14 Days Adventure</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="option">
+                                            <a href="">
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="icon  d-flex align-items-center justify-content-center">
+                                                        <i class="ri-mental-health-line"></i>
+                                                    </div>
+                                                    <div class="dropdown-items ">
+                                                        <div class="dropdown-heading main">Meditation Tour</div>
+                                                        <div class="dropdown-item">10 Days Retreat</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="option">
+                                            <a href="">
+                                                <div class="d-flex align-items-center gap-3">
+                                                    <div class="icon  d-flex align-items-center justify-content-center">
+                                                        <i class="ri-ancient-gate-line"></i>
+                                                    </div>
+                                                    <div class="dropdown-items ">
+                                                        <div class="dropdown-heading main">Cultural Tour</div>
+                                                        <div class="dropdown-item">7 Days Experience</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                    </div>
                 </div>
             </div>
         </div>
