@@ -310,7 +310,7 @@ section {
   font-size: var(--font-md);
 }
 .half-card .img-part {
-  height: 200px !important;
+  height: 125px !important;
   overflow: hidden;
   position: relative;
 }
@@ -349,7 +349,7 @@ section {
   padding: 7px 5px;
   background-color: var(--nav-color);
   font-size: var(--font-xsm);
-  border-radius: 15px;
+  border-radius: 5px;
 }
 .half-card .price {
   font-weight: 500;
@@ -997,6 +997,12 @@ footer .fotter-bottom a:hover {
   color: white !important;
 }
 
+.sacred {
+  font-size: var(--font-md);
+}
+.sacred .content-top {
+  border-bottom: 1px solid rgb(216, 206, 206);
+}
 .sacred .secondary-type-heading {
   box-shadow: var(--shadow-lgg) !important;
   z-index: 5;
@@ -1007,7 +1013,7 @@ footer .fotter-bottom a:hover {
 }
 .sacred .background-g .side-nav li {
   text-decoration: underline;
-  padding: 10px;
+  padding: 10px 10px 0 10px;
 }
 .sacred .background-g .side-nav li a {
   display: flex;
@@ -1020,18 +1026,23 @@ footer .fotter-bottom a:hover {
 .sacred .background-g .side-nav li:hover {
   color: var(--primary-color);
 }
+.sacred .background-g .side-nav li:last-child {
+  padding-bottom: 10px;
+}
 .sacred .inquiry form {
   position: relative;
 }
 .sacred .inquiry form input {
   color: var(--text-color);
-  padding: 10px;
+  padding: 5px;
   border: none;
   border-radius: 5px;
   box-shadow: var(--shadow-lgg);
+  font-size: var(--font-md);
 }
 .sacred .inquiry form input:focus-visible {
   outline: none;
+  box-shadow: var(--shadow-lgg);
 }
 .sacred .inquiry form textarea {
   padding: 5px;
@@ -1039,6 +1050,7 @@ footer .fotter-bottom a:hover {
   border: none;
   border-radius: 5px;
   box-shadow: var(--shadow-lgg);
+  font-size: var(--font-md);
 }
 .sacred .inquiry form textarea:focus-visible {
   outline: none;
