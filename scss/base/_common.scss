@@ -15,18 +15,18 @@ body {
 body {
     font-family: var(--primary-font) !important;
     font-size: clamp(14px, 1.5vw, 16px);
-    color: rgb(54, 52, 52)!important;
+    color: rgb(54, 52, 52) !important;
 
 }
 
 
 // color
-.text-white{
-    color:white !important;
+.text-white {
+    color: white !important;
 }
 
-.dark-light{
-    color:var(--light-color);
+.dark-light {
+    color: var(--light-color);
 }
 
 .row {
@@ -72,8 +72,8 @@ a {
     margin-bottom: 0 !important;
 }
 
-p{
-    color:rgb(80, 76, 76);
+p {
+    color: rgb(80, 76, 76);
 }
 
 ul {
@@ -85,6 +85,11 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+// dark-heading
+.dark {
+    color: rgb(59, 56, 56) !important;
 }
 
 // heading 
@@ -99,7 +104,7 @@ h1 {
     color: var(--heading-color);
 }
 
-.secondary-type-heading{
+.secondary-type-heading {
     font-size: var(--font-xxl);
     font-weight: 700;
     font-family: var(--secondary-font);
@@ -117,7 +122,7 @@ h1 {
     font-family: var(--secondary-font);
     font-weight: 700;
     color: var(--heading-color);
-    font-size:var(--text-lg);
+    font-size: var(--text-lg);
 }
 
 // body-font-colo-deam
@@ -130,8 +135,9 @@ h1 {
     font-size: var(--font-md);
     font-weight: 400;
 }
-.deam-black-thin{
-     color: var(--text-color);
+
+.deam-black-thin {
+    color: var(--text-color);
     font-size: var(--font-md);
     font-weight: 400;
 }
@@ -284,32 +290,35 @@ section {
 
 // caroiusel nav
 .owl-outer-stage {
-   position:relative;
+    position: relative;
 }
- .owl-nav {
-    position:absolute;
-    top:50%;
-    transform: translateY(-50%);
-    width:100%;
-        display: flex;
-        justify-content: space-between;
 
-        button {
-            width: 40px;
-            height: 40px;
-            border-radius:50%;
-            background-color: transparent;
-            // border:1px solid black !important;
-            box-shadow:var(--shadow-lg) !important;
-            &:hover{
-                background-color:rgb(245, 240, 240) !important;
-            }
+.owl-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: transparent;
+        // border:1px solid black !important;
+        box-shadow: var(--shadow-lg) !important;
+
+        &:hover {
+            background-color: rgb(245, 240, 240) !important;
         }
     }
+}
+
 // js
-.right{
-    right:0;
-    transition:0.5s;
+.right {
+    right: 0;
+    transition: 0.5s;
 }
 
 

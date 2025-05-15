@@ -110,6 +110,10 @@ img {
   object-fit: cover;
 }
 
+.dark {
+  color: rgb(59, 56, 56) !important;
+}
+
 h1 {
   margin-bottom: 0 !important;
 }
@@ -889,4 +893,8 @@ footer .fotter-bottom a:hover {
 }
 .banner-next .banner-content-next .heading-items {
   color: white !important;
+}
+
+.sacred .second-heading {
+  color: rgb(59, 56, 56) !important;
 }
