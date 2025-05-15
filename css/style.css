@@ -135,6 +135,13 @@ h1 {
   color: var(--heading-color);
 }
 
+.heading-second {
+  font-size: var(--font-xxxl);
+  font-weight: 700;
+  font-family: var(--secondary-font);
+  color: var(--heading-color);
+}
+
 .secondary-type-heading {
   font-size: var(--font-xxl);
   font-weight: 700;
@@ -310,8 +317,7 @@ section {
   font-size: var(--font-md);
 }
 .half-card .img-part {
-  height: 125px !important;
-  overflow: hidden;
+  height: 200px !important;
   position: relative;
 }
 .half-card .img-part .btn-1 {
@@ -322,6 +328,8 @@ section {
 }
 .half-card .img-part img {
   transition: 0.2s;
+  height: 100%;
+  width: 100%;
 }
 .half-card .normal-heading {
   font-size: var(--font-xl);
@@ -402,6 +410,11 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
 }
 
 .media-items {
@@ -1037,7 +1050,6 @@ footer .fotter-bottom a:hover {
   padding: 5px;
   border: none;
   border-radius: 5px;
-  box-shadow: var(--shadow-lgg);
   font-size: var(--font-md);
 }
 .sacred .inquiry form input:focus-visible {
@@ -1049,11 +1061,11 @@ footer .fotter-bottom a:hover {
   height: 90px;
   border: none;
   border-radius: 5px;
-  box-shadow: var(--shadow-lgg);
   font-size: var(--font-md);
 }
 .sacred .inquiry form textarea:focus-visible {
   outline: none;
+  box-shadow: var(--shadow-lgg);
 }
 .sacred .inquiry form button {
   box-shadow: var(--shadow-lgg) !important;
