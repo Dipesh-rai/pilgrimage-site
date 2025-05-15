@@ -103,9 +103,6 @@ a {
   width: 550px;
   margin-inline: auto;
   margin-bottom: 0 !important;
-}
-
-p {
   color: rgb(80, 76, 76);
 }
 
@@ -311,14 +308,15 @@ section {
 }
 
 .half-card {
-  height: 400px !important;
+  height: 430px !important;
   border: none !important;
   transition: 0.2s;
   font-size: var(--font-md);
 }
 .half-card .img-part {
-  height: 200px !important;
+  height: 200px;
   position: relative;
+  overflow: hidden;
 }
 .half-card .img-part .btn-1 {
   position: absolute;
@@ -435,6 +433,11 @@ section {
   color: white;
   box-shadow: var(--shadow-lg);
   transform: scale(1.2);
+}
+
+.border-5 {
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 header {
@@ -967,21 +970,6 @@ footer .fotter-bottom a:hover {
 .contact .message button {
   padding: 10px 0;
   margin-top: 10px;
-}
-.contact .media-items {
-  padding: 0;
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
-  font-size: var(--font-lg);
-  background-color: rgba(182, 172, 172, 0.151);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.contact .media-items:hover {
-  background-color: var(--primary-color);
-  color: white;
 }
 .contact .border-bottom {
   padding-bottom: 1rem;

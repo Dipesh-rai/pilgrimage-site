@@ -80,9 +80,6 @@ a {
     width: 550px;
     margin-inline: auto;
     margin-bottom: 0 !important;
-}
-
-p {
     color: rgb(80, 76, 76);
 }
 
@@ -114,8 +111,8 @@ h1 {
     color: var(--heading-color);
 }
 
-.heading-second{
-      font-size: var(--font-xxxl);
+.heading-second {
+    font-size: var(--font-xxxl);
     font-weight: 700;
     font-family: var(--secondary-font);
     color: var(--heading-color);
@@ -305,14 +302,15 @@ section {
 }
 
 .half-card {
-    height: 400px !important;
+    height: 430px !important;
     border: none !important;
     transition: 0.2s;
     font-size: var(--font-md);
 
     .img-part {
-        height: 200px !important;
+        height: 200px;
         position: relative;
+        overflow: hidden;
 
 
         .btn-1 {
@@ -324,8 +322,8 @@ section {
 
         img {
             transition: 0.2s;
-            height:100%;
-            width:100%;
+            height: 100%;
+            width: 100%;
         }
     }
 
@@ -428,9 +426,9 @@ section {
 
 
 // sticky
-.sticky{
-    position:sticky;
-    top:0;
+.sticky {
+    position: sticky;
+    top: 0;
 }
 
 // media
@@ -452,6 +450,15 @@ section {
         transform: scale(1.2);
     }
 }
+
+// border
+.border-5 {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+
 
 
 
