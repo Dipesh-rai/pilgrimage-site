@@ -1,24 +1,99 @@
 .banner-next {
     height: 40vh;
-  
+
     position: relative;
 
-    
-    
+
+
     .banner-content-next {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width:100%;
-        .heading-items{
-            color:white !important;
+        width: 100%;
+
+        .heading-items {
+            color: white !important;
         }
-        
+
     }
 }
 
-.sacred{
-    .second-heading{
-        color:rgb(59, 56, 56) !important;
+.sacred {
+    .secondary-type-heading{
+        box-shadow: var(--shadow-lgg) !important;
+        z-index:5;
+        position:relative;
+    }
+    .background-g {
+        color: var(--deam-color);
+
+        .side-nav {
+
+            li {
+                text-decoration: underline;
+                padding: 10px;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    i {
+                        font-size: var(--font-md);
+                    }
+
+
+                }
+
+                &:hover {
+                    color: var(--primary-color);
+                }
+            }
+
+
+
+
+        }
+
+    }
+
+    .inquiry {
+        form {
+            position:relative;
+            input {
+                color: var(--text-color);
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                box-shadow: var(--shadow-lgg);
+
+                &:focus-visible {
+                    outline: none;
+
+                }
+            }
+
+            textarea {
+                padding: 5px;
+                height: 90px;
+                border: none;
+                border-radius: 5px;
+                box-shadow: var(--shadow-lgg);
+
+                &:focus-visible {
+                    outline: none;
+
+                }
+            }
+
+            button {
+                box-shadow: var(--shadow-lgg) !important;
+            }
+        }
+
+    }
+
+    .media-items{
+        @include flex-center;
     }
 }
