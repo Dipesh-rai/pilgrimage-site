@@ -22,3 +22,27 @@ $(document).ready(function () {
 
     );
 });
+
+
+$(document).ready(function () {
+    $(".trip_heading").owlCarousel({
+        margin: 10,
+        lazyLoad: true,
+        nav:true,
+        dots:false,
+        responsive: {
+            0: {
+                items: 3 // for mobile
+            },
+            768: {
+                items: 3// for tablets
+            },
+            1250: {
+                items: 3 // for desktops
+            }
+        }
+    }
+
+
+    );
+});

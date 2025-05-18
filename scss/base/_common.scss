@@ -107,6 +107,13 @@ h1 {
     margin-bottom: 0 !important;
 }
 
+.main-heading{
+    font-size:var(--font-heading);
+     font-weight: 700;
+    font-family: var(--secondary-font);
+    color: var(--heading-color);
+}
+
 .heading-items {
     font-size: var(--font-heading);
     font-weight: 700;
@@ -387,14 +394,7 @@ section {
     position: relative;
 }
 
-.owl-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-
+ .owl-nav {
     button {
         width: 40px;
         height: 40px;
@@ -408,6 +408,20 @@ section {
         }
     }
 }
+.owl-prev{
+    top:50%;
+    transform: translateY(-50%);
+    position:absolute;
+    left:0;
+}
+
+.owl-next{
+     top:50%;
+    transform: translateY(-50%);
+    position:absolute;
+    right:0;
+}
+
 
 // js
 .right {

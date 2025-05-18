@@ -125,6 +125,13 @@ h1 {
   margin-bottom: 0 !important;
 }
 
+.main-heading {
+  font-size: var(--font-heading);
+  font-weight: 700;
+  font-family: var(--secondary-font);
+  color: var(--heading-color);
+}
+
 .heading-items {
   font-size: var(--font-heading);
   font-weight: 700;
@@ -375,14 +382,6 @@ section {
   position: relative;
 }
 
-.owl-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
 .owl-nav button {
   width: 40px;
   height: 40px;
@@ -392,6 +391,20 @@ section {
 }
 .owl-nav button:hover {
   background-color: rgb(245, 240, 240) !important;
+}
+
+.owl-prev {
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  left: 0;
+}
+
+.owl-next {
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  right: 0;
 }
 
 .right {
@@ -1069,5 +1082,106 @@ footer .fotter-bottom a:hover {
 }
 
 .banner-journey {
-  height: 80vh;
+  height: 60vh;
+  position: relative;
+}
+.banner-journey .banner-journey-items {
+  position: absolute;
+  bottom: 0;
+}
+.banner-journey .banner-journey-items img {
+  filter: brightness(0 90%);
+}
+.banner-journey .banner-journey-items .main-heading {
+  color: white !important;
+}
+
+.heading-trip-info {
+  position: sticky;
+  z-index: 100000;
+  top: 0;
+  padding: 10px 0;
+  background-color: var(--secondary-color);
+}
+.heading-trip-info .trip_heading {
+  padding: 0 40px;
+}
+.heading-trip-info .trip_heading .rounded.active {
+  color: white !important;
+}
+.heading-trip-info .trip_heading .owl-nav button {
+  width: fit-content !important;
+  height: fit-content !important;
+  background-color: transparent;
+  color: white !important;
+}
+.heading-trip-info .trip_heading .owl-nav button:hover {
+  background-color: var(--secondary-color) !important;
+}
+
+.trip-info .content-trip .adviser-part {
+  font-size: var(--font-md);
+}
+.trip-info .content-trip .adviser-part i {
+  color: rgb(55, 170, 108);
+  font-size: var(--font-md);
+}
+.trip-info .content-trip .adviser-part a {
+  text-decoration: underline !important;
+}
+.trip-info .content-trip .adviser-part .love {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: #FEE6E6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.trip-info .content-trip .adviser-part .love i {
+  color: #F73232 !important;
+}
+.trip-info .content-trip .trip-info-content {
+  background-color: var(--background-color);
+  padding: 20px;
+  border-radius: 10px;
+}
+.trip-info article ul li:before {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+.trip-info article h1 {
+  font-size: var(--font-heading);
+  font-weight: 700;
+  font-family: var(--secondary-font);
+  color: var(--heading-color);
+}
+.trip-info article h2 {
+  font-size: var(--font-xxxl);
+  font-weight: 700;
+  font-family: var(--secondary-font);
+  color: var(--heading-color);
+}
+.trip-info article h3 {
+  font-size: var(--font-xxl);
+  font-weight: 700;
+  font-family: var(--secondary-font);
+  color: var(--heading-color);
+}
+.trip-info article h4 {
+  font-size: var(--font-xl);
+  font-family: var(--secondary-font);
+  font-weight: 800;
+  color: var(--heading-color);
+}
+.trip-info article .secondary-type-heading {
+  margin-top: 30px;
+  font-size: var(--font-xxxl) !important;
+}
+.trip-info article .accordion .accordion-button {
+  font-weight: 800;
+}
+.trip-info article .accordion .accordion-button:focus {
+  box-shadow: none;
 }
