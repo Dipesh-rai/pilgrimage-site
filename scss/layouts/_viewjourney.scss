@@ -20,32 +20,21 @@
 
 .heading-trip-info {
     position: sticky;
-
-    z-index: 100000;
+    padding: 15px 0 !important;
+    z-index: 300;
     top: 0;
-    padding: 10px 0;
+
     background-color: var(--secondary-color);
+    color: white;
 
     // caroiusel nav
-    .trip_heading {
-        padding: 0 40px;
+    .rounded {
+        padding: 15px 10px !important;
+    }
 
-        .rounded.active {
-            color: white !important;
-        }
-
-        .owl-nav {
-            button {
-                width: fit-content !important;
-                height: fit-content !important;
-                background-color: transparent;
-                color: white !important;
-
-                &:hover {
-                    background-color: var(--secondary-color) !important;
-                }
-            }
-        }
+    .rounded.active {
+        background-color: var(--background-color) !important;
+        color: black !important;
     }
 
 }
@@ -92,11 +81,38 @@
 
     article {
         ul {
-            li:before{
-                //  content: url('./../img/correct.svg');
-    width: 16px;
-    height: 16px;
-    margin-right: 10px;
+            position: relative;
+
+            li {
+                padding: 5px 0;
+            }
+
+            li:before {
+                position: absolute;
+                left: 0;
+                content: url('./../img/correct (1).svg');
+                width: 10px !important;
+                height: 10px !important;
+                margin-right: 10px;
+            }
+        }
+
+        .price-exclude {
+            ul {
+                position: relative;
+
+                li {
+                    padding: 5px 0;
+                }
+
+                li:before {
+                    position: absolute;
+                    left: 0;
+                    content: url('./../img/incorrect (1).svg');
+                    width: 10px !important;
+                    height: 10px !important;
+                    margin-right: 10px;
+                }
             }
         }
 
@@ -105,6 +121,7 @@
             font-weight: 700;
             font-family: var(--secondary-font);
             color: var(--heading-color);
+            margin: 10px 0 5px 0;
         }
 
         h2 {
@@ -112,6 +129,7 @@
             font-weight: 700;
             font-family: var(--secondary-font);
             color: var(--heading-color);
+            margin: 10px 0 5px 0;
         }
 
         h3 {
@@ -119,6 +137,7 @@
             font-weight: 700;
             font-family: var(--secondary-font);
             color: var(--heading-color);
+            margin: 10px 0 5px 0;
         }
 
         h4 {
@@ -126,17 +145,23 @@
             font-family: var(--secondary-font);
             font-weight: 800;
             color: var(--heading-color);
+            margin: 10px 0 5px 0;
+        }
+
+        p {
+            margin-bottom: 10px !important;
         }
 
         .secondary-type-heading {
-            margin-top: 30px;
             font-size: var(--font-xxxl) !important;
         }
+
 
 
         .accordion {
             .accordion-button {
                 font-weight: 800;
+                font-size: var(--font-xl);
 
                 &:focus {
                     box-shadow: none;
@@ -144,5 +169,35 @@
             }
         }
 
+    }
+}
+
+.information-content {
+    .sticky {
+        top: 60px !important;
+
+        .price-exclusive {
+            padding: 20px;
+
+            button {
+                width: 100%;
+                border: none;
+            }
+
+            .simple-btn {
+                background-color: transparent;
+                border: none;
+                font-size: var(--font-md);
+                color: blue;
+            }
+
+            .modal {
+                z-index: 1100 !important;
+            }
+
+            .modal-backdrop {
+                z-index: 1099 !important;
+            }
+        }
     }
 }
