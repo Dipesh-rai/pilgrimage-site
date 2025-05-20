@@ -36,6 +36,10 @@ body {
 .flex-center-between {
     @include flex-center-between;
 }
+.flex-align-center{
+    display:flex;
+    align-items:center;
+}
 
 // color
 .text-white {

@@ -97,7 +97,17 @@ header {
     }
 
     .journey {
-
+        .whatsapp{
+            font-size:var(--font-md);
+            color:white;
+            a:hover{
+                color:var(--primary-color) !important;
+                text-decoration: underline !important;
+            }
+        }
+        img{
+            width:18px;
+        }
         // laptop
         @media (max-width:992px) {
             display: none;
@@ -107,7 +117,11 @@ header {
 
     .menu {
         display: none;
-
+      a{
+        img{
+            width:30px;
+        }
+      }
         button {
             color: white;
         }
