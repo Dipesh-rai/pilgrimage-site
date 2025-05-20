@@ -19,6 +19,23 @@ body {
 
 }
 
+// inline css
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.flex-column-center {
+    @include flex-center;
+    flex-direction: column;
+}
+
+.flex-all-center {
+    @include flex-center;
+}
+
+.flex-center-between {
+    @include flex-center-between;
+}
 
 // color
 .text-white {
@@ -27,6 +44,10 @@ body {
 
 .dark-light {
     color: var(--light-color);
+}
+
+.text-blue {
+    color: rgb(19, 19, 182);
 }
 
 // background-color
@@ -102,14 +123,16 @@ img {
     color: rgb(59, 56, 56) !important;
 }
 
-// heading 
+
 h1 {
     margin-bottom: 0 !important;
 }
 
-p{
-    margin-bottom:0 !important;
+p {
+    margin-bottom: 0 !important;
 }
+
+// heading 
 .main-heading {
     font-size: var(--font-heading);
     font-weight: 700;
@@ -147,9 +170,16 @@ p{
 
 .normal-heading {
     font-family: var(--secondary-font);
-    font-weight: 700;
+    font-weight: 800;
     color: var(--heading-color);
     font-size: var(--text-lg);
+}
+
+.mid-heading {
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    color: var(--heading-color);
+    font-size: var(--text-md);
 }
 
 // body-font-colo-deam
@@ -173,6 +203,10 @@ p{
     color: var(--deam-color);
     font-size: var(--font-sm);
     font-weight: 400;
+}
+
+.white-color{
+    color:white !important;
 }
 
 // height-width
@@ -225,6 +259,18 @@ section {
         opacity: 0.8;
     }
 }
+.button-1 {
+    padding: 5px 15px;
+    font-size: var(--font-md);
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 5px;
+    color: white;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
 
 .btn-2 {
     padding: 5px 15px;
@@ -262,14 +308,14 @@ section {
     padding: 10px 20px;
     border-radius: 15px;
     border: 2px solid var(--button-color);
-    color: var(--button-color);
+    color: var(--button-color) !important;
     background-color: none;
     font-weight: 600;
     transition: 0.5s;
 
     &:hover {
         background-color: var(--button-color);
-        color: white;
+        color: white !important;
     }
 }
 
@@ -477,9 +523,19 @@ section {
     top: 40px;
 }
 
+.sticky-60 {
+    position: sticky;
+    top: 60px;
+}
+
 // relative
 .relatively {
     position: relative;
+}
+
+// show
+.show{
+    display:block !important;
 }
 
 
