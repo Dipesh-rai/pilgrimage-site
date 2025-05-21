@@ -124,7 +124,7 @@
             font-weight: 700;
             font-family: var(--secondary-font);
             color: var(--heading-color);
-            margin: 10px 0 5px 0;
+            margin: 10px 0 10px 0 !important;
         }
 
         h2 {
@@ -180,6 +180,9 @@
         padding: 5px !important;
     }
 
+    .plann{
+        font-size:var(--font-md);
+    }
     .price-exclusive {
         padding: 20px;
 
@@ -269,8 +272,11 @@
         padding: 10px !important;
 
         .heading-type {
-            font-size: var(--font-lg);
+            font-size: var(--font-xl);
             text-align: center;
+            color:var(--heading-color);
+            font-family:var(--secondary-font);
+            font-weight:800;
         }
 
         .heading-tag {

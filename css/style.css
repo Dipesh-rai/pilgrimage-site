@@ -586,6 +586,7 @@ header .desktop-nav ul li .dropdown {
   top: 120%;
   left: 0;
   background-color: white;
+  box-shadow: var(--shadow-lg);
   color: black;
   padding: 10px;
   border-radius: 20px;
@@ -594,6 +595,7 @@ header .desktop-nav ul li .dropdown {
 header .desktop-nav ul li .dropdown .option {
   padding: 10px;
   border-radius: 20px;
+  white-space: nowrap;
 }
 header .desktop-nav ul li .dropdown .option:hover {
   background-color: var(--nav-color);
@@ -1278,7 +1280,7 @@ footer .fotter-bottom a:hover {
   font-weight: 700;
   font-family: var(--secondary-font);
   color: var(--heading-color);
-  margin: 10px 0 5px 0;
+  margin: 10px 0 10px 0 !important;
 }
 .trip-info article h2 {
   font-size: var(--font-xxxl);
@@ -1317,6 +1319,9 @@ footer .fotter-bottom a:hover {
 
 .information-content .sticky-part {
   padding: 5px !important;
+}
+.information-content .plann {
+  font-size: var(--font-md);
 }
 .information-content .price-exclusive {
   padding: 20px;
@@ -1389,8 +1394,11 @@ footer .fotter-bottom a:hover {
   padding: 10px !important;
 }
 .information-content .card .heading-type {
-  font-size: var(--font-lg);
+  font-size: var(--font-xl);
   text-align: center;
+  color: var(--heading-color);
+  font-family: var(--secondary-font);
+  font-weight: 800;
 }
 .information-content .card .heading-tag {
   font-size: var(--font-xl);
