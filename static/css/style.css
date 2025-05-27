@@ -668,7 +668,7 @@ header .offcanvas .offcanvas-body {
   padding: 20px;
 }
 header .offcanvas .offcanvas-body .trigger_nav {
-  height: 90vh;
+  height: 80vh;
   overflow: auto;
 }
 header .offcanvas .offcanvas-body nav ul {
