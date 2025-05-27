@@ -547,6 +547,15 @@ section {
   overflow: hidden;
 }
 
+.map-items {
+  height: 500px;
+  padding: 10px;
+}
+.map-items iframe {
+  width: 100%;
+  height: 100%;
+}
+
 header {
   position: fixed;
   top: 0;
