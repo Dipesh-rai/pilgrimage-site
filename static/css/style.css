@@ -665,7 +665,7 @@ header .offcanvas button {
   filter: invert(1) grayscale(100%) brightness(200%) !important;
 }
 header .offcanvas .offcanvas-body .trigger_nav {
-  height: 500px;
+  height: 100%;
   overflow: auto;
 }
 header .offcanvas .offcanvas-body nav ul {
