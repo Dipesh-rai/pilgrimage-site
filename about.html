@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="static/css/style.css">
     <!-- bootstrap-file -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -19,337 +19,279 @@
 
 <body>
     <!-- header section -->
-    <header class="background">
-        <div class="container">
-            <div class="top d-flex flex-wrap justify-content-between align-items-center">
-                <h1 class="font-['Pacifico']"><a href="index.html">Pilgrimage Tour</a></h1>
-                <nav class="desktop-nav">
-                    <ul class="d-flex gap-5 align-items-center">
-                        <li><a href="index.html">Home</a></li>
-                        <li>
-                            <div class="d-flex gap-2 align-items-center">
-                                <a href="sacredsite.html">Secrate Sites</a><a class="btn p-0" data-bs-toggle="collapse"
-                                    href="#multiCollapseExample1" role="button" aria-expanded="false"
-                                    aria-controls="multiCollapseExample1"><i class="fa-solid fa-chevron-down"></i></a>
-                            </div>
-                            <div class="collapse multi-collapse" id="multiCollapseExample1">
-                                <div class="dropdown">
-                                    <div class="d-flex flex-column">
-                                        <div class="option">
-                                            <a href="">
-                                                <div class="d-flex align-items-center gap-3">
-                                                    <div class="icon  d-flex align-items-center justify-content-center">
-                                                        <i class="ri-ancient-pavilion-line"></i>
-                                                    </div>
-                                                    <div class="dropdown-items ">
-                                                        <div class="dropdown-heading main">Lumbini</div>
-                                                        <div class="dropdown-item">Birthplace of Buddha
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="option">
-                                            <a href="">
-                                                <div class="d-flex align-items-center gap-3">
-                                                    <div class="icon  d-flex align-items-center justify-content-center">
-                                                        <i class="ri-ancient-gate-line"></i>
-                                                    </div>
-                                                    <div class="dropdown-items ">
-                                                        <div class="dropdown-heading main">Boudhanath</div>
-                                                        <div class="dropdown-item">Sacred Stupa</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="option">
-                                            <a href="">
-                                                <div class="d-flex align-items-center gap-3">
-                                                    <div class="icon  d-flex align-items-center justify-content-center">
-                                                        <i class="ri-building-line"></i>
-                                                    </div>
-                                                    <div class="dropdown-items ">
-                                                        <div class="dropdown-heading main">Swayambhunath
-                                                        </div>
-                                                        <div class="dropdown-item">Monkey Temple</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="d-flex gap-2 align-items-center">
-                                <a href="">Tours</a><a class="btn p-0" data-bs-toggle="collapse"
-                                    href="#multiCollapseExample2" role="button" aria-expanded="false"
-                                    aria-controls="multiCollapseExample1"><i class="fa-solid fa-chevron-down"></i></a>
-                            </div>
-                            <div class="collapse multi-collapse" id="multiCollapseExample2">
-                                <div class="dropdown">
-                                    <div class="d-flex flex-column">
-                                        <div class="option">
-                                            <a href="">
-                                                <div class="d-flex align-items-center gap-3">
-                                                    <div class="icon  d-flex align-items-center justify-content-center">
-                                                        <i class="ri-road-map-line"></i>
-                                                    </div>
-                                                    <div class="dropdown-items ">
-                                                        <div class="dropdown-heading main">Himalayan Journey</div>
-                                                        <div class="dropdown-item">14 Days Adventure</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="option">
-                                            <a href="">
-                                                <div class="d-flex align-items-center gap-3">
-                                                    <div class="icon  d-flex align-items-center justify-content-center">
-                                                        <i class="ri-mental-health-line"></i>
-                                                    </div>
-                                                    <div class="dropdown-items ">
-                                                        <div class="dropdown-heading main">Meditation Tour</div>
-                                                        <div class="dropdown-item">10 Days Retreat</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="option">
-                                            <a href="">
-                                                <div class="d-flex align-items-center gap-3">
-                                                    <div class="icon  d-flex align-items-center justify-content-center">
-                                                        <i class="ri-ancient-gate-line"></i>
-                                                    </div>
-                                                    <div class="dropdown-items ">
-                                                        <div class="dropdown-heading main">Cultural Tour</div>
-                                                        <div class="dropdown-item">7 Days Experience</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="d-flex gap-2 align-items-center">
-                                <a href="about.html">About us</a><a class="btn p-0" data-bs-toggle="collapse"
-                                    href="#multiCollapseExample1" role="button" aria-expanded="false"
-                                    aria-controls="multiCollapseExample1"><i class="fa-solid fa-chevron-down"></i></a>
-                            </div>
-                            <div class="collapse multi-collapse" id="multiCollapseExample1">
-                                <div class="dropdown">
-                                    <div class="d-flex flex-column">
-                                        <div class="option">
-                                            <a href="">
-                                                Our Mission
-                                            </a>
-                                        </div>
-                                        <div class="option">
-                                            <a href="">
-                                                Who we are
-                                            </a>
-                                        </div>
-                                        <div class="option">
-                                            <a href="">
-                                                Meet Our team
-                                            </a>
-                                        </div>
-                                        <div class="option">
-                                            <a href="">
-                                                Our Achivements
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
+    <header class="site-header">
+        <div class="top-header">
+            <div class="container">
+                {% for n in contactpage %}
+                <div class="flex-center-between">
+                    <div class="d-flex gap-2 align-items-center left-top-header">
+                        <div class="flex-align-center padding-right border-right gap-1">
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:{{n.telephone_number_first}}">{{n.telphone_number_1}},</a>
+                            <a href="tel:{{n.telephone_number_second}}">{{n.telephone_number_2}}</a>
 
-                <div class="journey flex-align-center gap-2">
-                    <div class="whatsapp"><a href="" class="flex-align-center gap-2"><img src="img/whatsapp.svg"
-                                alt="">+977 9812345678</a></div>
+                        </div>
+                        <div class="flex-align-center padding-right border-right gap-1">
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:{{n.email}}">{{n.email}}</a>
+                        </div>
+                        <div class="flex-align-center gap-1">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <a href="{{n.location_address_name}}" target="_blank"
+                                rel="noopener noreferrer">{{n.location_street}}, {{n.country}}</a>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3 align-items-center">
+                        <a href="https://www.facebook.com/AsiaBuddhistTours" target="_blank"><i
+                                class="header-media fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/nirvana__journey/" target="_blank"><i
+                                class="header-media fa-brands fa-instagram"></i></a>
+                        {% for n in contactpage %}
+                        <a href="https://wa.me/{{ n.whatsapp_number }}" target="_blank"><i
+                                class="header-media fa-brands fa-whatsapp"></i></a>
+                        {% endfor %}
+                        <a href=""><i class="fa-brands fa-tiktok"></i></i></a>
+                        <a href="https://www.youtube.com/channel/UCIkdaWLZl-fTsmS8EVSVjZg" target="_blank"><i class="header-media fa-brands fa-youtube"></i></a>
+                    </div>
                 </div>
+                {% endfor %}
+            </div>
 
-                <div class="menu">
-                    <a href=""><img src="img/whatsapp.svg" alt=""></a>
-                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                        aria-controls="offcanvasRight"><i class="fa-solid fa-bars"></i></button>
+        </div>
+        <div class="main-nav">
+            <div class="container">
+                <div class="top d-flex flex-wrap justify-content-between align-items-center">
+                    {% for n in logo %}
+                    <h1 class="font-['Pacifico']"><a href="/">{{ logo.logo_name }}</a></h1>
+                    {%  %}
+                    <nav class="desktop-nav">
+                        <ul class="d-flex gap-5 align-items-center">
+                            <li><a href="/">Home</a></li>
+                            <li>
+                                <div class="d-flex gap-2 align-items-center">
+                                    <a href="{% url 'categorypages' %}">Secrate Sites</a><a class="btn p-0"
+                                        data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+                                        aria-expanded="false" aria-controls="multiCollapseExample1"><i
+                                            class="fa-solid fa-chevron-down"></i></a>
+                                </div>
+                                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                    <div class="dropdown">
+                                        <div class="d-flex flex-column">
+                                            {% for n in categories %}
+                                            <div class="option flex-space-between gap-4">
+                                                <a href="{% url 'sacredsite' %}?category={{n.sacred_slug}}">
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <div
+                                                            class="icon  d-flex align-items-center justify-content-center">
+                                                            <img src="/media/{{n.category_img}}" alt="" class="nav-img">
+                                                        </div>
+                                                        <div class="flex-space-between">
+                                                            <div class="dropdown-heading main">{{n.category_name}}
+                                                            </div>
+                                                            <span class="badge bg-secondary ms-2">{{n.sacredsite.count}}
+                                                                items</span>
+                                                        </div>
 
-                </div>
+                                                    </div>
+                                                </a>
+                                                <i class="fa-solid fa-angle-right"></i>
+                                                <div class="side-bar">
+                                                    <ul class="black flex-column gap-2 shadow-main">
+                                                        {% for s in n.sacredsite.all %}
+                                                        <li class="p-2 nav-width">
+                                                            <a href="{% url 'journeyDetails' s.sacred_slug %}">
+                                                                <div class="d-flex gap-3 align-items-center">
+                                                                    <img src="media/{{s.sacred_image}}" alt=""
+                                                                        class="nav-img">
+                                                                    <div class="flex-column">
+                                                                        {{s.sacred_name}}
+                                                                        <small class="text-muted d-block"><i
+                                                                                class="fa-solid fa-location-dot"></i>
+                                                                            {{s.sacred_location}}</small>
 
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
-                    aria-labelledby="offcanvasRightLabel">
-                    <div class="offcanvas-header">
-                        <button type="button" class="btn-close white-close" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        {% empty %}
+                                                        <li class="p-2">No sacred sites.</li>
+                                                        {% endfor %}
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex gap-2 align-items-center">
+                                    <a href="{% url 'blog' %}">Blog</a>
+                                </div>
+
+                            </li>
+                            <li>
+                                <div class="d-flex gap-2 align-items-center">
+                                    <a href="{% url 'about'  %}">About us</a><a class="btn p-0"
+                                        data-bs-toggle="collapse" href="#multiCollapseExample3" role="button"
+                                        aria-expanded="false" aria-controls="multiCollapseExample3"><i
+                                            class="fa-solid fa-chevron-down"></i></a>
+                                </div>
+                                <div class="collapse multi-collapse" id="multiCollapseExample3">
+                                    <div class="dropdown">
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex flex-column">
+                                                <div class="option">
+                                                    <a href="{% url 'ourmission' %}">
+                                                        Our Mission
+                                                    </a>
+
+                                                </div>
+                                                <div class="option">
+                                                    <a href="{% url 'whytravel' %}">
+                                                        Why choose us?
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </li>
+                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="journey flex-align-center gap-2">
+                        {% for n in contactpage %}
+                        <div class="whatsapp"><a class="flex-align-center gap-2"
+                                href="https://wa.me/{{ n.whatsapp_number }}" target="_blank"><img
+                                    src="{% static 'img/whatsapp.svg' %}" alt="">{{ n.whatsapp_number }}</a></div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="menu">
+                        <a href=""><img src="{% static 'img/whatsapp.svg' %}" alt=""></a>
+                        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                            aria-controls="offcanvasRight"><i class="fa-solid fa-bars"></i></button>
 
                     </div>
-                    <div class="offcanvas-body p-0">
-                        <div class="trigger_nav">
-                            <nav>
-                                <ul class="d-flex flex-column">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li>
-                                        <div class="d-flex gap-2 align-items-center">
-                                            <a href="sacredsite.html">Secrate Sites</a><a class="btn p-0"
-                                                data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
-                                                aria-expanded="false" aria-controls="multiCollapseExample1"><i
-                                                    class="fa-solid fa-chevron-down"></i></a>
-                                        </div>
-                                        <div class="collapse multi-collapse" id="multiCollapseExample1">
-                                            <div class="dropdown">
-                                                <div class="d-flex flex-column">
-                                                    <div class="option">
-                                                        <a href="">
-                                                            <div class="d-flex align-items-center gap-3">
-                                                                <div
-                                                                    class="icon  d-flex align-items-center justify-content-center">
-                                                                    <i class="ri-ancient-pavilion-line"></i>
+
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                        aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <button type="button" class="btn-close white-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+
+                        </div>
+                        <div class="offcanvas-body p-0">
+                            <div class="trigger_nav">
+                                <nav>
+                                    <ul class="d-flex flex-column">
+                                        <li class="nav-item"><a href="index.html">Home</a></li>
+                                        <li class="nav-item">
+                                            <div class="d-flex justify-content-between align-items-center ">
+                                                <a class="nav-link" href="{% url 'categorypages' %}">Sacred Sites</a>
+                                                <button class="btn btn-link" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#sacredSitesCollapse" aria-expanded="false"
+                                                    aria-controls="sacredSitesCollapse">
+                                                    <i class="fas fa-chevron-down"></i>
+                                                </button>
+                                            </div>
+
+                                            <div class="collapse" id="sacredSitesCollapse">
+                                                <ul class="nav flex-column gap-1">
+                                                    {% for category in categories %}
+                                                    <li class="nav-item header-nav-link">
+                                                        <div class="d-flex justify-content-between align-items-center">
+                                                            <a class="nav-link p-0"
+                                                                href="{% url 'sacredsite' %}?category={{category.sacred_slug}}">
+                                                                <div class="d-flex align-items-center gap-3 p-0">
+                                                                    {% if category.category_img %}
+                                                                    <img src="/media/{{category.category_img}}" alt=""
+                                                                        class="nav-img">
+                                                                    {% endif %}
+                                                                    {{category.category_name}}
+                                                                    <span
+                                                                        class="badge bg-secondary ms-2">{{category.sacredsite.count}}</span>
                                                                 </div>
-                                                                <div class="dropdown-items ">
-                                                                    <div class="dropdown-heading main">Lumbini</div>
-                                                                    <div class="dropdown-item">Birthplace of Buddha
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                    <div class="option">
-                                                        <a href="">
-                                                            <div class="d-flex align-items-center gap-3">
-                                                                <div
-                                                                    class="icon  d-flex align-items-center justify-content-center">
-                                                                    <i class="ri-ancient-gate-line"></i>
-                                                                </div>
-                                                                <div class="dropdown-items ">
-                                                                    <div class="dropdown-heading main">Boudhanath</div>
-                                                                    <div class="dropdown-item">Sacred Stupa</div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                    <div class="option">
-                                                        <a href="">
-                                                            <div class="d-flex align-items-center gap-3">
-                                                                <div
-                                                                    class="icon  d-flex align-items-center justify-content-center">
-                                                                    <i class="ri-building-line"></i>
-                                                                </div>
-                                                                <div class="dropdown-items ">
-                                                                    <div class="dropdown-heading main">Swayambhunath
-                                                                    </div>
-                                                                    <div class="dropdown-item">Monkey Temple</div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
+                                                            </a>
+                                                            {% if category.sacredsite.exists %}
+                                                            <button class="btn btn-link" type="button"
+                                                                data-bs-toggle="collapse"
+                                                                data-bs-target="#tours-{{category.id}}"
+                                                                aria-expanded="false"
+                                                                aria-controls="tours-{{category.id}}">
+                                                                <i class="fas fa-chevron-right"></i>
+                                                            </button>
+                                                            {% endif %}
+                                                        </div>
+
+                                                        {% if category.sacredsite.exists %}
+                                                        <div class="collapse" id="tours-{{category.id}}">
+                                                            <ul class="nav flex-column gap-1">
+                                                                {% for site in category.sacredsite.all %}
+                                                                <li class="nav-item p-0">
+                                                                    <a class="nav-link header-nav-linkk"
+                                                                        href="{% url 'journeyDetails' site.sacred_slug %}">
+                                                                        <div class="flex-space-between">
+                                                                            <div
+                                                                                class="d-flex align-items-center gap-2">
+                                                                                <img src="media/{{site.sacred_image}}"
+                                                                                    alt="" class="nav-img">
+                                                                                <div class="flex-column">
+                                                                                    <span
+                                                                                        class="dark-text-color">{{site.sacred_name}}</span>
+                                                                                    <small
+                                                                                        class="text-muted d-block">{{site.sacred_location}}</small>
+                                                                                </div>
+                                                                            </div>
+                                                                            <small
+                                                                                class="text-muted">{{site.sacred_days}}
+                                                                                days</small>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                {% endfor %}
+                                                            </ul>
+                                                        </div>
+                                                        {% endif %}
+                                                    </li>
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="{% url 'blog' %}">Blog</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <div class="flex-space-between">
+                                                <a href="{% url 'about'  %}">About us</a><a data-bs-toggle="collapse"
+                                                    href="#multiCollapseExample5" role="button" aria-expanded="false"
+                                                    aria-controls="multiCollapseExample1" class="btn btn-link"><i
+                                                        class="fa-solid fa-chevron-down"></i></a>
+                                            </div>
+                                            <div class="collapse multi-collapse" id="multiCollapseExample5">
+                                                <div class="dropdown">
+                                                    <div class="d-flex flex-column gap-1">
+                                                        <div class="option p-3 header-nav-link">
+                                                            <a href="{% url 'ourmission' %}">
+                                                                Our Mission
+                                                            </a>
+                                                        </div>
+                                                        <div class="option p-3 header-nav-link">
+                                                            <a href="{% url 'whytravel' %}">
+                                                                Why choose us?
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="d-flex gap-2 align-items-center">
-                                            <a href="">Tours</a><a class="btn p-0" data-bs-toggle="collapse"
-                                                href="#multiCollapseExample2" role="button" aria-expanded="false"
-                                                aria-controls="multiCollapseExample1"><i
-                                                    class="fa-solid fa-chevron-down"></i></a>
-                                        </div>
-                                        <div class="collapse multi-collapse" id="multiCollapseExample2">
-                                            <div class="dropdown">
-                                                <div class="d-flex flex-column">
-                                                    <div class="option">
-                                                        <a href="">
-                                                            <div class="d-flex align-items-center gap-3">
-                                                                <div
-                                                                    class="icon  d-flex align-items-center justify-content-center">
-                                                                    <i class="ri-road-map-line"></i>
-                                                                </div>
-                                                                <div class="dropdown-items ">
-                                                                    <div class="dropdown-heading main">Himalayan Journey
-                                                                    </div>
-                                                                    <div class="dropdown-item">14 Days Adventure</div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                    <div class="option">
-                                                        <a href="">
-                                                            <div class="d-flex align-items-center gap-3">
-                                                                <div
-                                                                    class="icon  d-flex align-items-center justify-content-center">
-                                                                    <i class="ri-mental-health-line"></i>
-                                                                </div>
-                                                                <div class="dropdown-items ">
-                                                                    <div class="dropdown-heading main">Meditation Tour
-                                                                    </div>
-                                                                    <div class="dropdown-item">10 Days Retreat</div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                    <div class="option">
-                                                        <a href="">
-                                                            <div class="d-flex align-items-center gap-3">
-                                                                <div
-                                                                    class="icon  d-flex align-items-center justify-content-center">
-                                                                    <i class="ri-ancient-gate-line"></i>
-                                                                </div>
-                                                                <div class="dropdown-items ">
-                                                                    <div class="dropdown-heading main">Cultural Tour
-                                                                    </div>
-                                                                    <div class="dropdown-item">7 Days Experience</div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                    <li>
-                                        <div class="d-flex gap-2 align-items-center">
-                                            <a href="about.html">About us</a><a class="btn p-0"
-                                                data-bs-toggle="collapse" href="#multiCollapseExample5" role="button"
-                                                aria-expanded="false" aria-controls="multiCollapseExample1"><i
-                                                    class="fa-solid fa-chevron-down"></i></a>
-                                        </div>
-                                        <div class="collapse multi-collapse" id="multiCollapseExample5">
-                                            <div class="dropdown">
-                                                <div class="d-flex flex-column">
-                                                    <div class="option">
-                                                        <a href="">
-                                                            Our Mission
-                                                        </a>
-                                                    </div>
-                                                    <div class="option">
-                                                        <a href="">
-                                                            Who we are
-                                                        </a>
-                                                    </div>
-                                                    <div class="option">
-                                                        <a href="">
-                                                            Meet Our team
-                                                        </a>
-                                                    </div>
-                                                    <div class="option">
-                                                        <a href="">
-                                                            Our Achivements
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li><a href="contact.html">Contact</a></li>
-
-
-                                </ul>
-                            </nav>
+                                        </li>
+                                        <li class="nav-item"><a href="{% url 'contact' %}">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -486,7 +428,44 @@
 
     </section>
 
+    <script>
+        // header
+const header = document.querySelector('.site-header');
+let isScrolled = false;
 
+window.addEventListener('scroll', () => {
+    if(window.scrollY > 50 && !isScrolled){
+        header.classList.add('scrolled');
+        isScrolled = true;
+    } else if (window.scrollY < 10 && isScrolled) {
+        header.classList.remove('scrolled');
+        isScrolled = false;
+    }
+})
+
+
+document.addEventListener('click', function (event) {
+    const collapseIds = ['multiCollapseExample1','multiCollapseExample3'];
+
+    collapseIds.forEach(id => {
+        const collapse = document.getElementById(id);
+        const trigger = document.querySelector(`[data-bs-toggle="collapse"][href="#${id}"]`);
+
+        if (!collapse || !trigger) return;
+
+        const isInsideCollapse = collapse.contains(event.target);
+        const isInsideTrigger = trigger.contains(event.target);
+
+        if (!isInsideCollapse && !isInsideTrigger && collapse.classList.contains('show')) {
+            const collapseInstance = bootstrap.Collapse.getInstance(collapse);
+            if (collapseInstance) {
+                collapseInstance.hide();
+            }
+        }
+    });
+});
+
+    </script>
 
     <!-- footer -->
     <footer class="w-100">
